@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9eada1fc-38b4-4735-aec0-ce422e632cb9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/attendanceservice/controller/AttendanceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/attendanceservice/model/Attendance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/attendanceservice/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/attendanceservice/repository/AttendanceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/attendanceservice/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/attendanceservice/service/AttendanceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/attendanceservice/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/attendanceservice/serviceImpl/AttendanceServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/attendanceservice/serviceImpl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/attendance-service/src/main/java/com/attendanceservice/AttendanceServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/attendanceservice/AttendanceServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/attendance-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/attendance-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +25,14 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,6 +62,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "full.screen.before.presentation.mode": "false",
     "jdk.selected.JAVA_MODULE": "19",
     "last_opened_file_path": "E:/Micro-service-java/School-Management-System/discovery-server",

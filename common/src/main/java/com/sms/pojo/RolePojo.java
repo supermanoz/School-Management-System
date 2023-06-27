@@ -1,24 +1,16 @@
-package com.sms.model.user_management;
+package com.sms.pojo;
 
 import com.sms.enums.user_management.UserEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
-
-@Entity
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
-@Table(name = "roles")
-public class Role {
+public class RolePojo {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long roleId;
 
-    @Column(unique = true)
     private UserEnum role;
-
 }

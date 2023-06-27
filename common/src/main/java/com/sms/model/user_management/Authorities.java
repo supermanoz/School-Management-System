@@ -1,6 +1,5 @@
 package com.sms.model.user_management;
 
-import com.sms.enums.user_management.UserEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,17 +7,18 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
-@NoArgsConstructor
-@AllArgsConstructor
 @Data
-@Table(name = "roles")
-public class Role {
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(name = "authorities")
+public class Authorities {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long roleId;
+    private Long authorityId;
 
     @Column(unique = true)
-    private UserEnum role;
+    private String authorityName;
+
 
 }

@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/School-Management-System.iml" filepath="$PROJECT_DIR$/.idea/School-Management-System.iml" />
+      <module fileurl="file://$PROJECT_DIR$/attendance-service/attendance-service.iml" filepath="$PROJECT_DIR$/attendance-service/attendance-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config-server/config-server.iml" filepath="$PROJECT_DIR$/config-server/config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/discovery-server/discovery-server.iml" filepath="$PROJECT_DIR$/discovery-server/discovery-server.iml" />
     </modules>
   </component>
 </project>

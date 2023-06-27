@@ -8,14 +8,20 @@
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
         <module name="discovery-server" />
+        <module name="common" />
+        <module name="attendance-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="attendance-service" target="11" />
+      <module name="common" target="11" />
+      <module name="config-server" target="11" />
       <module name="discovery-server" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="attendance-service" options="-parameters" />
       <module name="config-server" options="-parameters" />
       <module name="discovery-server" options="-parameters" />
     </option>

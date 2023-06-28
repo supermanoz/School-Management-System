@@ -1,7 +1,7 @@
 package com.sms.services.user_management.serviceImpl;
 
-import com.sms.model.user_management.Role;
 import com.sms.repository.user_management.RoleRepository;
+import com.sms.model.user_management.Role;
 import com.sms.services.user_management.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -9,9 +9,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class FilterConfig {
 
-    @Value("${header}")
+    @Value("${sms.auth.token.header.name}")
     private String AUTH_TOKEN_HEADER_NAME;
-    @Value("${secret}")
+    @Value("${sms.auth.token.value}")
     private String AUTH_TOKEN;
     @Bean
     public FilterRegistrationBean<RequestSourceFilter> requestSourceFilterFilterRegistrationBean(){

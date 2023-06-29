@@ -1,5 +1,7 @@
 package com.sms.userservice.filter;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
@@ -16,6 +18,7 @@ import java.io.IOException;
 //@PropertySource("classpath:application.properties")
 public class RequestSourceFilter extends OncePerRequestFilter {
 
+    private static final Logger LOGGER= LoggerFactory.getLogger(RequestSourceFilter.class);
     private String AUTH_TOKEN_HEADER_NAME;
     private String AUTH_TOKEN;
 
@@ -24,11 +27,10 @@ public class RequestSourceFilter extends OncePerRequestFilter {
     public RequestSourceFilter(String authTokenHeaderName,String authToken){
         AUTH_TOKEN_HEADER_NAME=authTokenHeaderName;
         AUTH_TOKEN=authToken;
-        System.out.println(AUTH_TOKEN+"adsfkj"+AUTH_TOKEN_HEADER_NAME);
+        LOGGER.info("Auth Token Header: "+AUTH_TOKEN_HEADER_NAME+", Auth Token: "+AUTH_TOKEN);
     }
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-//        System.out.println(AUTH_TOKEN+" "+AUTH_TOKEN_HEADER_NAME);
         String authToken=request.getHeader(AUTH_TOKEN_HEADER_NAME);
         if(authToken==null || !authToken.equals(AUTH_TOKEN)){
             throw new ServletException("Unauthorized Access Source to the API Endpoint!");

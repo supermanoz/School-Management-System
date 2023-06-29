@@ -3,6 +3,8 @@ F:\Java\Spring-Boot\School-Management-System\common\src\main\java\com\sms\servic
 F:\Java\Spring-Boot\School-Management-System\common\src\main\java\com\sms\services\user_management\serviceImpl\AuthoritiesServiceImpl.java
 F:\Java\Spring-Boot\School-Management-System\common\src\main\java\com\sms\pojo\AuthoritiesPojo.java
 F:\Java\Spring-Boot\School-Management-System\common\src\main\java\com\sms\services\user_management\AuthoritiesService.java
+F:\Java\Spring-Boot\School-Management-System\common\src\main\java\com\sms\exception\NotFoundException.java
+F:\Java\Spring-Boot\School-Management-System\common\src\main\java\com\sms\model\user_management\StudentGradeHistory.java
 F:\Java\Spring-Boot\School-Management-System\common\src\main\java\com\sms\response\SmsResponse.java
 F:\Java\Spring-Boot\School-Management-System\common\src\main\java\com\sms\pojo\RolePojo.java
 F:\Java\Spring-Boot\School-Management-System\common\src\main\java\com\sms\services\user_management\serviceImpl\UserServiceImpl.java

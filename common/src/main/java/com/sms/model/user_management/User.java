@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -20,11 +22,17 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long userId;
 
+    @NotNull
+    @NotBlank
     private String firstName;
 
+    @NotNull
+    @NotBlank
     private String lastName;
 
     @Email
+    @NotNull
+    @NotBlank
     @Column(unique = true)
     private String email;
 

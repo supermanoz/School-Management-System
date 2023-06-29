@@ -1,4 +1,5 @@
 com\sms\response\SmsResponse.class
+com\sms\exception\NotFoundException.class
 com\sms\services\user_management\serviceImpl\RelationServiceImpl.class
 com\sms\repository\user_management\UserRepository.class
 com\sms\services\user_management\serviceImpl\AuthoritiesServiceImpl.class
@@ -16,6 +17,7 @@ com\sms\model\user_management\User.class
 com\sms\repository\user_management\RelationRepository.class
 com\sms\services\user_management\serviceImpl\RoleServiceImpl.class
 com\sms\Main.class
+com\sms\model\user_management\StudentGradeHistory.class
 com\sms\pojo\ScreenPojo.class
 com\sms\model\user_management\Role.class
 com\sms\services\user_management\AuthoritiesService.class
@@ -24,5 +26,6 @@ com\sms\pojo\RelationPojo.class
 com\sms\model\user_management\Relation.class
 com\sms\services\user_management\serviceImpl\UserServiceImpl.class
 com\sms\model\user_management\Screen.class
+com\sms\response\SmsResponse$SmsResponseBuilder.class
 com\sms\services\user_management\ScreenService.class
 com\sms\services\user_management\RelationService.class

@@ -11,7 +11,7 @@ import java.util.Objects;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
-    User findByEmail();
+    User findByEmail(String email);
 
     @Query(value = "select u.* from users u;",nativeQuery = true)
     List<Map<String, Objects>> fetchALl();

@@ -1,8 +1,8 @@
 package com.sms.services.user_management.serviceImpl;
 
-import com.sms.model.user_management.User;
 import com.sms.repository.user_management.UserRepository;
 import com.sms.services.user_management.UserService;
+import com.sms.model.user_management.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

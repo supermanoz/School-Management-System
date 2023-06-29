@@ -1,13 +1,12 @@
 package com.example.academic.models;
 
+import com.sms.model.user_management.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Data
@@ -19,5 +18,15 @@ public class Academic {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long academicId;
 
-    private String userId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User userId;
+
+    private Integer marks;
+
+    private Date date;
+
+    private String Subject;
+
+    private String term;
 }

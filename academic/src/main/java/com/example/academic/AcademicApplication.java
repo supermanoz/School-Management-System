@@ -12,8 +12,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @ComponentScan({"com.sms.*","com.example.academic.*"})
-@EntityScan({"com.sms.model.*","com.example.academic.models.*"})
-@EnableJpaRepositories(basePackages = {"com.sms.repository.*"})
+@EntityScan({"com.sms.model.*","com.example.academic.*"})
+@EnableJpaRepositories(basePackages = {"com.sms.repository.*","com.example.academic.*"})
 @EnableAutoConfiguration
 @Configuration
 public class AcademicApplication {

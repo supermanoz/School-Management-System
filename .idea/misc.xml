@@ -6,6 +6,10 @@
       <list>
         <option value="$PROJECT_DIR$/config-server/pom.xml" />
         <option value="$PROJECT_DIR$/discovery-server/pom.xml" />
+        <option value="$PROJECT_DIR$/common/pom.xml" />
+        <option value="$PROJECT_DIR$/gateway-server/pom.xml" />
+        <option value="$PROJECT_DIR$/user-management/pom.xml" />
+        <option value="$PROJECT_DIR$/attendance-service/pom.xml" />
       </list>
     </option>
   </component>

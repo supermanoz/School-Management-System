@@ -1,6 +1,6 @@
 package com.sms.response;
 
-public class SmsResponse<Tggit > {
+public class SmsResponse<T> {
     private Integer code;
     private String name;
     private Boolean status;

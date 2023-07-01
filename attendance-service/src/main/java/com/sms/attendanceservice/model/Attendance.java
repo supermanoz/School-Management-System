@@ -1,3 +1,4 @@
+
 package com.sms.attendanceservice.model;
 
 import com.sms.model.user_management.User;
@@ -18,13 +19,18 @@ import java.util.List;
 public class Attendance {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long attendanceId;
     private LocalDateTime checkIn;
     private LocalDateTime checkOut;
+    private String createdBy;
+    private String updatedBy;
+
     @OneToMany
+    @JoinTable(name = "user_attendance")
     @JoinColumn(name = "userId")
-    private User user;
+    private List<User> userId;
 
 
 }
+

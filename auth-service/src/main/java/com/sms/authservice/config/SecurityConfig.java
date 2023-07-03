@@ -13,7 +13,7 @@ public class SecurityConfig {
         return http
                 .cors().and().csrf().disable()
                 .authorizeRequests()
-//                .antMatchers("/**").permitAll()
+                .antMatchers("/api/auth/getToken").permitAll()
                 .anyRequest().authenticated()
                 .and().httpBasic()
                 .and().build();

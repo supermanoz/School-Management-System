@@ -31,7 +31,7 @@ public class SmsUserDetails implements UserDetails {
 
     @Override
     public String getPassword() {
-        return "test";
+        return user.getPassword();
     }
 
     @Override

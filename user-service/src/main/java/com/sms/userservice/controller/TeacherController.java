@@ -1,5 +1,6 @@
 package com.sms.userservice.controller;
 
+import com.sms.response.SmsResponse;
 import com.sms.userservice.models.TeacherGradeHistory;
 import com.sms.userservice.service.TeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,16 +22,12 @@ public class TeacherController {
     @Autowired
     private TeacherService teacherService;
 
-    @GetMapping("getAll")
-    public ResponseEntity<?> getAll(){
-        List<Map<String, Objects>> teachers = teacherService.getAll();
-        return ResponseEntity.status(HttpStatus.OK).body(teachers);
-    }
+
 
     @GetMapping("getById/{teacherId}")
     public ResponseEntity<?> getById(@PathVariable("teacherId") Long teacherId){
         Map<String, Objects> teacher = teacherService.getById(teacherId);
-        return ResponseEntity.status(HttpStatus.OK).body(teacher);
+        return ResponseEntity.status(HttpStatus.OK).body(new SmsResponse("",true, teacher));
     }
 
     @GetMapping("getGradeHistory/{teacherId}")

@@ -33,7 +33,7 @@ public class User {
     @Email
     @NotNull
     @NotBlank
-    @Column(unique = true)
+    @Column(name = "email",unique = true)
     private String email;
 
     @Size(min = 5)

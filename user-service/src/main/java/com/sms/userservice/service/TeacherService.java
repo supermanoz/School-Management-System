@@ -7,7 +7,6 @@ import java.util.Map;
 import java.util.Objects;
 
 public interface TeacherService {
-    List<Map<String, Objects>> getAll();
 
     Map<String, Objects> getById(Long teacherId);
 

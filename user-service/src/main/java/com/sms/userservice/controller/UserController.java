@@ -3,16 +3,17 @@ package com.sms.userservice.controller;
 import com.sms.exception.NotFoundException;
 import com.sms.pojo.UserPojo;
 import com.sms.response.SmsResponse;
-import com.sms.userservice.service.UserService;
 import com.sms.model.user_management.User;
+import com.sms.services.user_management.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 @RestController
 @RequestMapping("/api/users")
@@ -22,12 +23,12 @@ public class UserController {
     private UserService userService;
     @GetMapping("/fetch")
     public ResponseEntity<SmsResponse> getUserByEmail(@RequestParam("email") String email) {
-        User user=userService.getByEmail(email);
+        User user = userService.getByEmail(email);
         if(user==null){
             throw new NotFoundException("Unregistered Email!");
         }
-        UserPojo userRes=userToDto(user);
-        return ResponseEntity.ok().body(new SmsResponse("",true,userRes));
+        UserPojo userRes = userToDto(user);
+        return ResponseEntity.ok().body(new SmsResponse("",true, new SmsResponse("",true, userRes)));
     }
 
     @GetMapping("/fetch/{id}")
@@ -37,7 +38,7 @@ public class UserController {
             throw new NotFoundException("User Not Found!");
         }
         UserPojo userRes=userToDto(user);
-        return ResponseEntity.ok().body(new SmsResponse("",true,userRes));
+        return ResponseEntity.ok().body(new SmsResponse("",true,new SmsResponse("",true, user)));
     }
 
     @PostMapping("/fetchMany")
@@ -45,7 +46,7 @@ public class UserController {
         List<User> users=userService.getManyById(ids);
         List<UserPojo> userRes=new ArrayList<>();
         users.forEach(user->userRes.add(userToDto(user)));
-        return ResponseEntity.ok().body(new SmsResponse("",true,userRes));
+        return ResponseEntity.ok().body(new SmsResponse("",true,new SmsResponse("",true, userRes)));
     }
 
     @GetMapping("/fetchAllStudents")

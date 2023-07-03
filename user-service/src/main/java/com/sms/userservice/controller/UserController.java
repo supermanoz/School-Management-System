@@ -6,13 +6,14 @@ import com.sms.response.SmsResponse;
 import com.sms.userservice.service.UserService;
 import com.sms.model.user_management.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 @RestController
 @RequestMapping("/api/users")
@@ -22,11 +23,11 @@ public class UserController {
     private UserService userService;
     @GetMapping("/fetch")
     public ResponseEntity<SmsResponse> getUserByEmail(@RequestParam("email") String email) {
-        User user=userService.getByEmail(email);
-        if(user==null){
+        Map<String, Objects> userRes=userService.getByEmail(email);
+        System.out.println(userRes);
+        if(userRes.isEmpty()){
             throw new NotFoundException("Unregistered Email!");
         }
-        UserPojo userRes=userToDto(user);
         return ResponseEntity.ok().body(new SmsResponse("",true,userRes));
     }
 

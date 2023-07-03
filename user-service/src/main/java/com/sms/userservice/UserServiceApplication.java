@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @EnableEurekaClient
 @ComponentScan(basePackages = {"com.sms.model.*","com.sms.userservice.*"})
-@EntityScan("com.sms.model")
+@EntityScan(basePackages = {"com.sms.model"})
 public class UserServiceApplication {
 
 	public static void main(String[] args) {

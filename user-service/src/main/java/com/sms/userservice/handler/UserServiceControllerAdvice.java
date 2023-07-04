@@ -23,6 +23,6 @@ public class UserServiceControllerAdvice {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<?> globalExceptionHandler(Exception exception){
-        return ResponseEntity.badRequest().body(new SmsResponse(HttpStatus.NO_CONTENT.name(), false,exception.getMessage()));
+        return ResponseEntity.badRequest().body(new SmsResponse(HttpStatus.BAD_REQUEST.name(), false,exception.getMessage()));
     }
 }

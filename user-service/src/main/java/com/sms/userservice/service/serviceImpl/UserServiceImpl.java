@@ -1,6 +1,5 @@
 package com.sms.userservice.service.serviceImpl;
 
-import com.sms.exception.NotFoundException;
 import com.sms.userservice.repository.UserRepository;
 import com.sms.userservice.service.UserService;
 import com.sms.model.user_management.User;
@@ -8,9 +7,7 @@ import com.sms.model.user_management.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -18,8 +15,9 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepository;
     @Override
-    public User getByEmail(String email){
-        return userRepository.findByEmail(email).get();
+    public Map<String, Objects> getByEmail(String email){
+        Map<String, Objects> res=userRepository.getUserByEmail(email);
+        return res;
     }
 
     @Override

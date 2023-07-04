@@ -39,9 +39,7 @@ public class User {
     @Size(min = 5)
     private String password;
 
-//    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "role_id")
     private Role roles;
-
 }

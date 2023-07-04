@@ -8,7 +8,11 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: config-server
-          uri: lb://config-server
+#        - id: config-server
+#          uri: lb://config-server
+#          predicates:
+#            - Path=/**
+        - id: user-service
+          uri: lb://USER-SERVICE
           predicates:
-            - Path=/**
+            - Path=/api/users/**

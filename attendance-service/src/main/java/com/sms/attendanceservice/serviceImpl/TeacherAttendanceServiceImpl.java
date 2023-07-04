@@ -63,6 +63,10 @@ public class TeacherAttendanceServiceImpl implements TeacherAttendanceService {
 
         List<TeacherAttendance> teacherAttendances = teacherAttendanceRepo.findAll();
 
+        if (teacherAttendances.isEmpty()){
+            throw new NotFoundException("Attendance List is Empty");
+        }
+
         List<TeacherAttendancePojo> teacherAttendancePojoList = teacherAttendances.stream()
                 .map( teacherAttendance -> {
                     TeacherAttendancePojo pojo = new TeacherAttendancePojo();

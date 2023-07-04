@@ -7,7 +7,7 @@ import java.util.List;
 public interface StudentAttendanceService {
 
     StudentAttendancePojo createStudentAttendance(StudentAttendancePojo studentAttendancePojo);
-    List<StudentAttendance> getAllStudentAttendance();
+    List<StudentAttendancePojo> getAllStudentAttendance();
 
 
 

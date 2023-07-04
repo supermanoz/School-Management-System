@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class StudentAttendanceServiceImpl implements StudentAttendanceService {
@@ -41,14 +42,22 @@ public class StudentAttendanceServiceImpl implements StudentAttendanceService {
             }
 
     @Override
-    public List<StudentAttendance> getAllStudentAttendance() {
+    public List<StudentAttendancePojo> getAllStudentAttendance() {
 
-
-        List<StudentAttendance> getAllStudentAttendance = studentAttendanceRepo.findAll();
-        if(getAllStudentAttendance.isEmpty()){
+        List<StudentAttendance> studentAttendances = studentAttendanceRepo.findAll();
+        if(studentAttendances.isEmpty()){
             throw new NotFoundException("there is no attendance");
         }
+        List<StudentAttendancePojo> studentAttendancePojoList = studentAttendances.stream()
+                .map( studentAttendance -> {
+                    StudentAttendancePojo pojo = new StudentAttendancePojo();
+                    pojo.setStudentAttendanceId(studentAttendance.getStudentAttendanceId());
+                    pojo.setStudentId(studentAttendance.getStudentId());
+                    pojo.setAttendDate(studentAttendance.getAttendDate());
 
-        return getAllStudentAttendance;
+                    return pojo;
+                }).collect(Collectors.toList());
+
+        return studentAttendancePojoList;
     }
 }

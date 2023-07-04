@@ -3,6 +3,7 @@ package com.sms.attendanceservice.serviceImpl;
 import com.sms.attendanceservice.model.TeacherAttendance;
 import com.sms.attendanceservice.pojo.TeacherAttendancePojo;
 import com.sms.attendanceservice.repository.TeacherAttendanceRepository;
+import com.sms.attendanceservice.service.AttendanceService;
 import com.sms.attendanceservice.service.TeacherAttendanceService;
 import com.sms.exception.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -80,6 +81,12 @@ public class TeacherAttendanceServiceImpl implements TeacherAttendanceService {
 
     @Override
     public TeacherAttendancePojo getById(Long teacherAttendanceId) {
+
+        TeacherAttendance teacherAttendance = teacherAttendanceRepo.findById(teacherAttendanceId).get();
+
+
+
+
         return null;
     }
 }

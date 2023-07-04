@@ -4,7 +4,8 @@ import com.sms.attendanceservice.model.StudentAttendance;
 import com.sms.attendanceservice.pojo.StudentAttendancePojo;
 import com.sms.attendanceservice.repository.StudentAttendanceRepository;
 import com.sms.attendanceservice.service.StudentAttendanceService;
-import com.sms.exception.AlreadyExistException;
+//import com.sms.exception.AlreadyExistException;
+import com.sms.exception.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,7 +26,7 @@ public class StudentAttendanceServiceImpl implements StudentAttendanceService {
 
         Optional<StudentAttendance> optionalStudentAttendance = studentAttendanceRepo.findByAttendDateAndStudentId(LocalDate.now(), studentAttendancePojo.getStudentId());
         if(optionalStudentAttendance.isPresent()){
-             throw new AlreadyExistException("attendance already taken");
+             throw new RuntimeException("attendance already taken");
         }
 
         StudentAttendance studentAttendance = new StudentAttendance();
@@ -48,7 +49,9 @@ public class StudentAttendanceServiceImpl implements StudentAttendanceService {
 
 
         List<StudentAttendance> getAllStudentAttendance = studentAttendanceRepo.findAll();
-//        if()
+        if(getAllStudentAttendance.isEmpty()){
+            throw new NotFoundException("there is no attendance");
+        }
 
         return getAllStudentAttendance;
     }

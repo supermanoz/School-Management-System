@@ -4,7 +4,7 @@ import com.sms.attendanceservice.model.Attendance;
 import com.sms.attendanceservice.pojo.AttendancePojo;
 import com.sms.attendanceservice.repository.AttendanceRepository;
 import com.sms.attendanceservice.service.AttendanceService;
-import com.sms.exception.AlreadyExistException;
+//import com.sms.exception.AlreadyExistException;
 import com.sms.exception.NotFoundException;
 import com.sms.repository.user_management.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;

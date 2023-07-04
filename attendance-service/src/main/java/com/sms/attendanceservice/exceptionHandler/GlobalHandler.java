@@ -1,6 +1,7 @@
 package com.sms.attendanceservice.exceptionHandler;
 
 //import com.sms.exception.AlreadyExistException;
+import com.sms.exception.AlreadyExistException;
 import com.sms.exception.NotFoundException;
 import com.sms.response.SmsResponse;
 import org.springframework.http.HttpStatus;
@@ -23,15 +24,15 @@ public class GlobalHandler {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(smsResponse);
     }
 
-//    @ExceptionHandler(AlreadyExistException.class)
-//    public ResponseEntity<?> alreadyExistException(AlreadyExistException alreadyExistException){
-//
-//        SmsResponse smsResponse = SmsResponse.builder()
-//                .status(true)
-//                .message(alreadyExistException.getMessage())
-////                .payload(alreadyExistException)
-//                .build();
-//
-//        return ResponseEntity.status(HttpStatus.ALREADY_REPORTED).body(smsResponse);
-//    }
+    @ExceptionHandler(AlreadyExistException.class)
+    public ResponseEntity<?> alreadyExistException(AlreadyExistException alreadyExistException){
+
+        SmsResponse smsResponse = SmsResponse.builder()
+                .status(true)
+                .message(alreadyExistException.getMessage())
+//                .payload(alreadyExistException)
+                .build();
+
+        return ResponseEntity.status(HttpStatus.ALREADY_REPORTED).body(smsResponse);
+    }
 }

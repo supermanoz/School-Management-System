@@ -23,6 +23,7 @@ com\sms\pojo\ScreenPojo.class
 com\sms\pojo\UserDetailsPojo.class
 com\sms\model\user_management\Role.class
 com\sms\services\user_management\AuthoritiesService.class
+com\sms\exception\AlreadyExistException.class
 com\sms\repository\user_management\ScreenRepository.class
 com\sms\pojo\RelationPojo.class
 com\sms\model\user_management\Relation.class

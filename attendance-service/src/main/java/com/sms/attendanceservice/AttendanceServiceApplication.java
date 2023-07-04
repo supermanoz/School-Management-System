@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import org.springframework.web.reactive.function.client.WebClient;
+//import org.springframework.web.reactive.function.client.WebClient;
 
 @SpringBootApplication
 @ComponentScan(basePackages = {"com.sms.*"})
@@ -19,10 +19,10 @@ import org.springframework.web.reactive.function.client.WebClient;
 @EnableEurekaClient
 public class AttendanceServiceApplication {
 
-	@Bean
-	public WebClient.Builder webClientBuilder(){
-		return WebClient.builder();
-	}
+//	@Bean
+//	public WebClient.Builder webClientBuilder(){
+//		return WebClient.builder();
+//	}
 
 
 	public static void main(String[] args) {

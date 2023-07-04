@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Id;
 import java.time.LocalDate;
 import java.util.Date;
 
@@ -14,7 +13,6 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class StudentAttendancePojo {
-
 
     private Long studentAttendanceId;
     private Long studentId;

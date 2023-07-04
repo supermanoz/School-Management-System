@@ -20,6 +20,7 @@ E:\Micro-service-java\School-Management-System\common\src\main\java\com\sms\repo
 E:\Micro-service-java\School-Management-System\common\src\main\java\com\sms\pojo\UserDetailsPojo.java
 E:\Micro-service-java\School-Management-System\common\src\main\java\com\sms\services\user_management\UserService.java
 E:\Micro-service-java\School-Management-System\common\src\main\java\com\sms\pojo\UserPojo.java
+E:\Micro-service-java\School-Management-System\common\src\main\java\com\sms\exception\AlreadyExistException.java
 E:\Micro-service-java\School-Management-System\common\src\main\java\com\sms\model\user_management\Role.java
 E:\Micro-service-java\School-Management-System\common\src\main\java\com\sms\services\user_management\serviceImpl\UserServiceImpl.java
 E:\Micro-service-java\School-Management-System\common\src\main\java\com\sms\services\user_management\AuthoritiesService.java

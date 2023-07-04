@@ -9,9 +9,8 @@ import com.sms.exception.NotFoundException;
 import com.sms.repository.user_management.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.reactive.function.client.WebClient;
+//import org.springframework.web.reactive.function.client.WebClient;
 
-import java.sql.SQLOutput;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -23,8 +22,6 @@ public class AttendanceServiceImpl implements AttendanceService {
     private AttendanceRepository attendanceRepo;
     @Autowired
     private UserRepository userRepository;
-/*    @Autowired
-    private WebClient.Builder webclient;*/
 
 
 //    @Override

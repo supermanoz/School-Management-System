@@ -1,3 +1,4 @@
+/*
 package com.sms.filter;
 
 import org.slf4j.Logger;
@@ -15,7 +16,6 @@ import java.io.IOException;
 
 
 @Component
-//@PropertySource("classpath:application.properties")
 public class RequestSourceFilter extends OncePerRequestFilter {
 
     private static final Logger LOGGER= LoggerFactory.getLogger(RequestSourceFilter.class);
@@ -38,3 +38,4 @@ public class RequestSourceFilter extends OncePerRequestFilter {
         filterChain.doFilter(request,response);
     }
 }
+*/

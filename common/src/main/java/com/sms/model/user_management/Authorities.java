@@ -19,6 +19,4 @@ public class Authorities {
 
     @Column(unique = true)
     private String authorityName;
-
-
 }

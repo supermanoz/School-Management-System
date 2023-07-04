@@ -5,14 +5,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77a028fd-96dc-48b3-a15b-36b8b534c2d1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/gateway-server/src/main/java/com/sms/gatewayserver/config/SmsRestTemplate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-server/src/main/java/com/sms/gatewayserver/filter/AuthFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-server/src/main/java/com/sms/gatewayserver/response/SmsResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/controller/TeacherAttendanceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/exceptionHandler/GlobalHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/model/StudentAttendance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/model/TeacherAttendance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/pojo/StudentAttendancePojo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/pojo/TeacherAttendancePojo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/repository/StudentAttendanceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/repository/TeacherAttendanceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/service/StudentAttendanceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/service/TeacherAttendanceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/serviceImpl/StudentAttendanceServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/serviceImpl/TeacherAttendanceServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/common-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/common-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/common-1.0.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/common-1.0.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/com/sms/gatewayserver/GatewayServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/java/com/sms/gatewayserver/GatewayServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/controller/AttendanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/controller/AttendanceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/model/Attendance.java" beforeDir="false" afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/model/Attendance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/pojo/AttendancePojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/pojo/AttendancePojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/repository/AttendanceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/repository/AttendanceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/service/AttendanceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/service/AttendanceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/serviceImpl/AttendanceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/serviceImpl/AttendanceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/attendance-service/target/classes/com/sms/attendanceservice/controller/AttendanceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/attendance-service/target/classes/com/sms/attendanceservice/controller/AttendanceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/attendance-service/target/classes/com/sms/attendanceservice/model/Attendance.class" beforeDir="false" afterPath="$PROJECT_DIR$/attendance-service/target/classes/com/sms/attendanceservice/model/Attendance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/attendance-service/target/classes/com/sms/attendanceservice/repository/AttendanceRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/attendance-service/target/classes/com/sms/attendanceservice/repository/AttendanceRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/attendance-service/target/classes/com/sms/attendanceservice/service/AttendanceService.class" beforeDir="false" afterPath="$PROJECT_DIR$/attendance-service/target/classes/com/sms/attendanceservice/service/AttendanceService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/attendance-service/target/classes/com/sms/attendanceservice/serviceImpl/AttendanceServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/attendance-service/target/classes/com/sms/attendanceservice/serviceImpl/AttendanceServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/model/user_management/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/model/user_management/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/enums/user_management/UserEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/enums/user_management/UserEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/exception/NotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/exception/NotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Authorities.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Authorities.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Relation.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Relation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Screen.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Screen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/StudentGradeHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/StudentGradeHistory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/pojo/AuthoritiesPojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/pojo/AuthoritiesPojo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/pojo/RelationPojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/pojo/RelationPojo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/pojo/RolePojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/pojo/RolePojo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/pojo/ScreenPojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/pojo/ScreenPojo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/pojo/UserPojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/pojo/UserPojo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/repository/user_management/AuthoritiesRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/repository/user_management/AuthoritiesRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/repository/user_management/RelationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/repository/user_management/RelationRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/repository/user_management/RoleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/repository/user_management/RoleRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/repository/user_management/ScreenRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/repository/user_management/ScreenRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/repository/user_management/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/repository/user_management/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/response/SmsResponse$SmsResponseBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/response/SmsResponse$SmsResponseBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/response/SmsResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/response/SmsResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/AuthoritiesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/AuthoritiesService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/RelationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/RelationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/RoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/RoleService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/ScreenService.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/ScreenService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/serviceImpl/AuthoritiesServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/serviceImpl/AuthoritiesServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/serviceImpl/RelationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/serviceImpl/RelationServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/serviceImpl/RoleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/serviceImpl/RoleServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/serviceImpl/ScreenServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/serviceImpl/ScreenServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/serviceImpl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/serviceImpl/UserServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,19 +96,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/GitHub/School-Management-System/auth-service&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "11",
+    "last_opened_file_path": "F:/GitHub/School-Management-System/auth-service",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.GatewayServerApplication">
     <configuration name="AuthServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sms.authservice.AuthServiceApplication" />
@@ -114,6 +163,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AuthServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="auth-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sms.authservice.AuthServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="config-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sms.configserver.ConfigServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiscoveryServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="discovery-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sms.discoveryserver.DiscoveryServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="gateway-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sms.gatewayserver.GatewayServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="user-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sms.userservice.UserServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.AuthServiceApplication" />
+      <item itemvalue="Application.GatewayServerApplication" />
+      <item itemvalue="Application.UserServiceApplication" />
+      <item itemvalue="Spring Boot.AuthServiceApplication" />
+      <item itemvalue="Spring Boot.ConfigServerApplication" />
+      <item itemvalue="Spring Boot.DiscoveryServerApplication" />
+      <item itemvalue="Spring Boot.GatewayServerApplication" />
+      <item itemvalue="Spring Boot.UserServiceApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.GatewayServerApplication" />
@@ -132,5 +226,9 @@
       <updated>1688036022093</updated>
     </task>
     <servers />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

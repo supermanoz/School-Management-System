@@ -1,16 +1,19 @@
 package com.sms.attendanceservice.pojo;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.sms.model.user_management.User;
+import lombok.*;
 
 import java.util.List;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-public class AttendancePojo {
 
+@Getter
+@Setter
+
+public class AttendancePojo {
     private Long attendanceId;
-    private List<Long> users;
+
+    private List<User> users;
+    private String createdBy;
+    private String updatedBy;
+
 }

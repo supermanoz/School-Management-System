@@ -8,7 +8,11 @@ import java.util.List;
 
 public interface AttendanceService {
 
-    Attendance checkInAttendance(AttendancePojo attendancePojo);
+    AttendancePojo checkInAttendance(AttendancePojo attendancePojo);
+
+    Attendance chekOutAttendance(Long attendanceId, Attendance attendance);
+
+
     List<Attendance> getAllAttendance();
 
     List<Attendance> getAttendanceByUserId(Long userId);

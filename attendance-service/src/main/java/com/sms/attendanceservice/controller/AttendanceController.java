@@ -20,34 +20,17 @@ public class AttendanceController {
 
     @Autowired
     private AttendanceService attendanceService;
+    @PostMapping("/checkInOut")
+    public ResponseEntity<?> checkInOutAttendance(@RequestParam( required = false) Long attendanceId, @RequestBody AttendancePojo attendancePojo){
 
-
-    @PostMapping("/checkIn")
-    public ResponseEntity<?> createAttendance(@RequestBody AttendancePojo attendancePojo){
-
-        AttendancePojo checkInAttendance = attendanceService.checkInAttendance(attendancePojo);
-       SmsResponse response = SmsResponse.builder()
-               .status(true)
-               .message("successfully Created")
-               .payload(checkInAttendance)
-               .build();
-
-        return ResponseEntity.ok().body(response);
-    }
-
-    @PutMapping("/checkOut/{attendanceId}")
-    public ResponseEntity<?> createAttendance(@PathVariable("attendanceId") Long attendanceId, @RequestBody AttendancePojo attendancePojo){
-
-        AttendancePojo checkOutAttendance = attendanceService.chekOutAttendance(attendanceId,attendancePojo);
+        AttendancePojo checkInOutAttendance = attendanceService.checkInOutAttendance(attendanceId,attendancePojo);
         SmsResponse response = SmsResponse.builder()
                 .status(true)
-                .message("successfully checkout")
-                .payload(checkOutAttendance)
+                .message("successfully created")
+                .payload(checkInOutAttendance)
                 .build();
-
         return ResponseEntity.ok().body(response);
     }
-
 
     @GetMapping("/fetchAll")
     public ResponseEntity<?> getAllAttendance(){
@@ -57,6 +40,19 @@ public class AttendanceController {
               .message("successfully found")
               .payload(allAttendance)
               .build();
-      return ResponseEntity.ok().body(response.getPayload());
+      return ResponseEntity.ok().body(response);
+    }
+
+    @GetMapping("/fetchById/{attendanceId}")
+    public ResponseEntity<?> getAttendanceById(@PathVariable Long attendanceId){
+
+        AttendancePojo attendanceById = attendanceService.getByAttendanceId(attendanceId);
+        SmsResponse response = SmsResponse.builder()
+                .status(true)
+                .message("successfully found")
+                .payload(attendanceById)
+                .build();
+
+        return ResponseEntity.ok().body(response);
     }
 }

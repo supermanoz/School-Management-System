@@ -9,7 +9,6 @@ import com.sms.exception.NotFoundException;
 import com.sms.repository.user_management.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -23,75 +22,86 @@ public class AttendanceServiceImpl implements AttendanceService {
     @Autowired
     private UserRepository userRepository;
 
+    /**
+     *
+     * @param attendanceId
+     * @param attendancePojo
+     * @return
+     */
     @Override
-    public AttendancePojo checkInAttendance(AttendancePojo attendancePojo) {
+    public AttendancePojo checkInOutAttendance(Long attendanceId, AttendancePojo attendancePojo) {
 
-        Attendance attendance = new Attendance();
+        //CHECKIN
+        if (attendanceId==null){
 
-        attendance.setAttendanceId(attendancePojo.getAttendanceId());
-        attendance.setUserId(attendancePojo.getUserId());
-        attendance.setSubjectCode(attendancePojo.getSubjectCode());
-        attendance.setCheckIn(LocalDateTime.now());
+            Attendance attendance =new Attendance();
+            attendance.setAttendanceId(attendance.getAttendanceId());
+            attendance.setUserId(attendancePojo.getUserId());
+            attendance.setSubjectCode(attendancePojo.getSubjectCode());
+            attendance.setCheckIn(LocalDateTime.now());
 
-        attendanceRepo.save(attendance);
+            attendanceRepo.save(attendance);
+            AttendancePojo attendancePojo1 = new AttendancePojo();
+            attendancePojo1.setAttendanceId(attendance.getAttendanceId());
+            attendancePojo1.setUserId(attendance.getUserId());
+            attendancePojo1.setCheckIn(attendance.getCheckIn());
+            attendancePojo1.setSubjectCode(attendance.getSubjectCode());
 
+            return attendancePojo1;
+        }
+
+        //CHECKOUT
+        Optional<Attendance> attendance = attendanceRepo.findById(attendanceId);
+
+        attendance.get().setCheckOut(LocalDateTime.now());
+
+        attendanceRepo.save(attendance.get());
         AttendancePojo attendancePojo1 = new AttendancePojo();
-        attendancePojo1.setAttendanceId(attendance.getAttendanceId());
-        attendancePojo1.setUserId(attendance.getUserId());
-        attendancePojo1.setCheckIn(attendance.getCheckIn());
-        attendancePojo1.setSubjectCode(attendance.getSubjectCode());
+        attendancePojo1.setAttendanceId(attendance.get().getAttendanceId());
+        attendancePojo1.setUserId(attendance.get().getUserId());
+        attendancePojo1.setSubjectCode(attendance.get().getSubjectCode());
+        attendancePojo1.setCheckOut(attendance.get().getCheckOut());
 
         return attendancePojo1;
-    }
-
-    @Override
-    public AttendancePojo chekOutAttendance(Long attendanceId, AttendancePojo attendancePojo) {
-
-          Optional<Attendance> updateAttendance = attendanceRepo.findById(attendanceId);
-
-          if (!updateAttendance.isPresent()){
-            throw new NotFoundException("attendance is not exist");
-        }
-        updateAttendance.get().setCheckOut(LocalDateTime.now());
-          attendanceRepo.save(updateAttendance.get());
-
-          AttendancePojo attendancePojo1 = new AttendancePojo();
-            attendancePojo1.setAttendanceId(updateAttendance.get().getAttendanceId());
-            attendancePojo1.setUserId(updateAttendance.get().getUserId());
-            attendancePojo1.setSubjectCode(updateAttendance.get().getSubjectCode());
-            attendancePojo1.setCheckOut(updateAttendance.get().getCheckOut());
-
-          return attendancePojo1;
-
 
     }
-
 
     @Override
     public List<AttendancePojo> getAllAttendance() {
 
-        List<Attendance> attendances = attendanceRepo.findAll();
+        List<Attendance> listOfAttendance = attendanceRepo.findAll();
 
-        if(attendances.isEmpty())
-        {
-            throw new NotFoundException("attendance database is empty");
-        }
-
-        List<AttendancePojo> attendancePojoList =  attendances.stream()
+        List<AttendancePojo> attendancePojo = listOfAttendance.stream()
                 .map(attendance -> {
                     AttendancePojo pojo = new AttendancePojo();
                     pojo.setAttendanceId(attendance.getAttendanceId());
                     pojo.setUserId(attendance.getUserId());
-                    pojo.setSubjectCode(attendance.getSubjectCode());
                     pojo.setCheckIn(attendance.getCheckIn());
                     pojo.setCheckOut(attendance.getCheckOut());
+                    pojo.setSubjectCode(attendance.getSubjectCode());
 
                     return pojo;
+                }).collect(Collectors.toList());
 
-        }).collect(Collectors.toList());
+        return attendancePojo;
+    }
 
+    @Override
+    public AttendancePojo getByAttendanceId(Long attendanceId) {
 
-        return attendancePojoList;
+        Optional<Attendance> attendance = attendanceRepo.findById(attendanceId);
+        if(!attendance.isPresent()){
+            throw new NotFoundException("this is userId is not Found in Database");
+        }
+
+        AttendancePojo attendancePojo = new AttendancePojo();
+        attendancePojo.setAttendanceId(attendance.get().getAttendanceId());
+        attendancePojo.setUserId(attendance.get().getUserId());
+        attendancePojo.setCheckIn(attendance.get().getCheckIn());
+        attendancePojo.setCheckOut(attendance.get().getCheckOut());
+        attendancePojo.setSubjectCode(attendance.get().getSubjectCode());
+
+        return attendancePojo;
     }
 
     @Override

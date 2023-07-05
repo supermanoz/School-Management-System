@@ -7,6 +7,7 @@ import com.sms.attendanceservice.service.AttendanceService;
 import com.sms.response.SmsResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import org.springframework.data.repository.query.Param;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,35 +22,36 @@ public class AttendanceController {
     private AttendanceService attendanceService;
 
 
-//    @PostMapping("/checkIn")
-//    public ResponseEntity<?> createAttendance(@RequestBody AttendancePojo attendancePojo){
-//
-//        Optional<Attendance> checkInAttendance = attendanceService.checkInAttendance(attendancePojo);
-//       SmsResponse response = SmsResponse.builder()
-//               .status(true)
-//               .message("successfully Created")
-//               .payload(checkInAttendance)
-//               .build();
-//
-//        return ResponseEntity.ok().body(response);
-//    }
+    @PostMapping("/checkIn")
+    public ResponseEntity<?> createAttendance(@RequestBody AttendancePojo attendancePojo){
 
-    @PutMapping("/checkout/{attendanceId}")
-    public ResponseEntity<?> updateAttendance(@PathVariable("attendanceId") Long attendanceId, @RequestBody Attendance attendance){
+        AttendancePojo checkInAttendance = attendanceService.checkInAttendance(attendancePojo);
+       SmsResponse response = SmsResponse.builder()
+               .status(true)
+               .message("successfully Created")
+               .payload(checkInAttendance)
+               .build();
 
-        Attendance chekOutAttendance = attendanceService.chekOutAttendance(attendanceId,attendance);
+        return ResponseEntity.ok().body(response);
+    }
+
+    @PutMapping("/checkOut/{attendanceId}")
+    public ResponseEntity<?> createAttendance(@PathVariable("attendanceId") Long attendanceId, @RequestBody AttendancePojo attendancePojo){
+
+        AttendancePojo checkOutAttendance = attendanceService.chekOutAttendance(attendanceId,attendancePojo);
         SmsResponse response = SmsResponse.builder()
                 .status(true)
-                .message("successfully updated")
-                .payload(chekOutAttendance)
+                .message("successfully checkout")
+                .payload(checkOutAttendance)
                 .build();
+
         return ResponseEntity.ok().body(response);
     }
 
 
     @GetMapping("/fetchAll")
     public ResponseEntity<?> getAllAttendance(){
-      List<Attendance> allAttendance =  attendanceService.getAllAttendance();
+      List<AttendancePojo> allAttendance =  attendanceService.getAllAttendance();
       SmsResponse response = SmsResponse.builder()
               .status(true)
               .message("successfully found")

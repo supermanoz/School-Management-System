@@ -10,10 +10,10 @@ public interface AttendanceService {
 
     AttendancePojo checkInAttendance(AttendancePojo attendancePojo);
 
-    Attendance chekOutAttendance(Long attendanceId, Attendance attendance);
+    AttendancePojo chekOutAttendance(Long attendanceId, AttendancePojo attendancePojo);
 
 
-    List<Attendance> getAllAttendance();
+    List<AttendancePojo> getAllAttendance();
 
     List<Attendance> getAttendanceByUserId(Long userId);
 

@@ -16,16 +16,10 @@ public class Attendance {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long attendanceId;
+    private Long userId;
     private LocalDateTime checkIn;
     private LocalDateTime checkOut;
-    private String createdBy;
-    private String updatedBy;
-
-    @OneToMany
-    @JoinTable(name = "user_attendance")
-    @JoinColumn(name = "userId")
-    private List<User> users;
-
+    private String subjectCode;
 
 }
 

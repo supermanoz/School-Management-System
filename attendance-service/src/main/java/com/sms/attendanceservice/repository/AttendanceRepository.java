@@ -14,8 +14,9 @@ import java.util.Optional;
 public interface AttendanceRepository extends JpaRepository<Attendance, Long> {
 
 //   @Query("select a from Attendance a where a.checkIn =:checkIn")
-   @Query(value = "SELECT * FROM attendance WHERE check_in>current_date() and created_by=:createdBy",nativeQuery = true)
-   public Optional<Attendance> getByCheckInAndCreatedBy(@Param("createdBy") String createdBy);
+
+/*   @Query(value = "SELECT * FROM attendance WHERE check_in>current_date() and created_by=:createdBy",nativeQuery = true)
+   public Optional<Attendance> getByCheckInAndCreatedBy(@Param("createdBy") String createdBy);*/
 
 }
 

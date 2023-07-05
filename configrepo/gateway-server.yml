@@ -1,8 +1,6 @@
 server:
   port: 9090
 spring:
-  application:
-    name: gateway-server
   cloud:
     gateway:
       routes:

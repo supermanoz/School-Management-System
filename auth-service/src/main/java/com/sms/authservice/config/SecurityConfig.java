@@ -31,7 +31,7 @@ public class SecurityConfig {
                 .and().httpBasic()
                 .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and().addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
-                .addFilterBefore(new RequestSourceFilter(AUTH_TOKEN_HEADER_NAME,AUTH_TOKEN), UsernamePasswordAuthenticationFilter.class)
+//                .addFilterBefore(new RequestSourceFilter(AUTH_TOKEN_HEADER_NAME,AUTH_TOKEN), UsernamePasswordAuthenticationFilter.class)
                 .build();
     }
 }

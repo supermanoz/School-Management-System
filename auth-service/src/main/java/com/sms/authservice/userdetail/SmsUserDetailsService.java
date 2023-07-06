@@ -26,11 +26,14 @@ public class SmsUserDetailsService implements UserDetailsService {
 
     @Value("${sms.auth.token.value}")
     private String AUTH_TOKEN;
+
+    private final String baseUrl = "http://USER-SERVICE";
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        SmsResponse response=webClient.build()
+        SmsResponse response=webClient.baseUrl(baseUrl)
+                .build()
                 .get()
-                .uri("http://localhost:8092/api/users/fetch?email="+username)
+                .uri("/api/users/fetch?email="+username)
                 .header(AUTH_TOKEN_HEADER_NAME,AUTH_TOKEN)
                 .retrieve()
                 .bodyToMono(SmsResponse.class)
@@ -41,7 +44,6 @@ public class SmsUserDetailsService implements UserDetailsService {
         }
         ObjectMapper objectMapper=new ObjectMapper();
         UserDetailsPojo user=objectMapper.convertValue(response.getPayload(),UserDetailsPojo.class);
-        System.out.println(user.getAuthorities());
         return new SmsUserDetails(user);
     }
 }

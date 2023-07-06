@@ -21,8 +21,8 @@ public class UserServiceControllerAdvice {
         return ResponseEntity.badRequest().body(new SmsResponse(HttpStatus.NO_CONTENT.name(), false,notFoundException.getMessage()));
     }
 
-    @ExceptionHandler(Exception.class)
-    public ResponseEntity<?> globalExceptionHandler(Exception exception){
-        return ResponseEntity.badRequest().body(new SmsResponse(HttpStatus.BAD_REQUEST.name(), false,exception.getMessage()));
-    }
+//    @ExceptionHandler(Exception.class)
+//    public ResponseEntity<?> globalExceptionHandler(Exception exception){
+//        return ResponseEntity.badRequest().body(new SmsResponse(HttpStatus.BAD_REQUEST.name(), false,exception.getMessage()));
+//    }
 }

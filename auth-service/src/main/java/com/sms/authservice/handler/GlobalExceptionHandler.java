@@ -6,6 +6,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+import javax.servlet.ServletException;
+import java.io.IOException;
+
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
@@ -13,4 +16,14 @@ public class GlobalExceptionHandler {
     public ResponseEntity<?> usernameNotFoundExceptionHandler(UsernameNotFoundException usernameNotFoundException){
         return ResponseEntity.badRequest().body(new SmsResponse(usernameNotFoundException.getMessage(),false,null));
     }
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<?> exceptionHandler(Exception exception){
+        return ResponseEntity.badRequest().body(new SmsResponse(exception.getMessage(),false,null));
+    }
+
+//    @ExceptionHandler(IOException.class)
+//    public ResponseEntity<SmsResponse> servletExceptionHandler(IOException exception){
+//        return ResponseEntity.badRequest().body(new SmsResponse(exception.getMessage(),false,null));
+//    }
 }

@@ -3,14 +3,14 @@ package com.sms.gatewayserver.config;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.client.RestTemplate;
+import org.springframework.web.reactive.function.client.WebClient;
 
 @Configuration
-public class SmsRestTemplate {
+public class SmsWebClient {
 
     @Bean
-//    @LoadBalanced
-    public RestTemplate restTemplate(){
-        return new RestTemplate();
+    @LoadBalanced
+    public WebClient.Builder webClientBuilder(){
+        return WebClient.builder();
     }
 }

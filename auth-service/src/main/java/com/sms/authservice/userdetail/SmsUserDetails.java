@@ -2,6 +2,8 @@ package com.sms.authservice.userdetail;
 
 import com.sms.model.user_management.User;
 import com.sms.pojo.UserDetailsPojo;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -13,6 +15,7 @@ import java.util.List;
 
 public class SmsUserDetails implements UserDetails {
 
+    private static final Logger LOGGER= LoggerFactory.getLogger(SmsUserDetails.class);
     private UserDetailsPojo user;
 
     public SmsUserDetails(UserDetailsPojo user){
@@ -24,7 +27,7 @@ public class SmsUserDetails implements UserDetails {
         List<SimpleGrantedAuthority> authorities = new ArrayList<>();
         authoritiesList.forEach(authority -> {
             authorities.add(new SimpleGrantedAuthority(authority));
-            System.out.println("Authority set: "+authority);
+           LOGGER.trace("Authority set: "+authority);
         });
         return authorities;
     }

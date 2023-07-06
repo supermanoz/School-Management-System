@@ -4,6 +4,8 @@ import com.sms.authservice.dto.AuthRequest;
 import com.sms.authservice.dto.AuthResponse;
 import com.sms.authservice.service.AuthService;
 import com.sms.response.SmsResponse;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/auth")
 public class AuthController {
 
+    private static Logger LOGGER= LoggerFactory.getLogger(AuthController.class);
     @Autowired
     private AuthService authService;
 
@@ -25,11 +28,12 @@ public class AuthController {
 
     @GetMapping("/getToken")
     public ResponseEntity<SmsResponse> getToken(@RequestBody AuthRequest user) throws Exception {
-        return ResponseEntity.ok().body(new SmsResponse("JWT Token",true,authService.getToken(user)));
+        AuthResponse token=authService.getToken(user);
+        return ResponseEntity.ok().body(new SmsResponse("JWT Token",true,token));
     }
 
     @GetMapping("/authenticate")
     public ResponseEntity<SmsResponse> authenticate(){
-        return ResponseEntity.ok().body(new SmsResponse("Authenticated",true,true));
+        return ResponseEntity.ok().body(new SmsResponse("Authenticated",true,null));
     }
 }

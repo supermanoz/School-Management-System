@@ -8,6 +8,11 @@ spring:
   cloud:
     gateway:
       routes:
+        - id: attendance-service
+          uri: lb://ATTENDANCE-SERVICE
+          predicates:
+            - Path=/api/attendances/**
+
 #        - id: config-server
 #          uri: lb://config-server
 #          predicates:

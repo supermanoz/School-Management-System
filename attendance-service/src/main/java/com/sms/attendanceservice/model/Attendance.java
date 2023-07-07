@@ -2,6 +2,7 @@ package com.sms.attendanceservice.model;
 import com.sms.model.user_management.User;
 import lombok.*;
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -11,12 +12,15 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Builder
-public class Attendance {
+public class Attendance implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long attendanceId;
-    private Long userId;
+
+    @OneToOne
+    @JoinColumn(name = "user_id")
+    private User user;
     private LocalDateTime checkIn;
     private LocalDateTime checkOut;
     private String subjectCode;

@@ -1,5 +1,6 @@
 com\sms\response\SmsResponse.class
 com\sms\exception\NotFoundException.class
+com\sms\enums\user_management\PeriodEnum.class
 com\sms\services\user_management\serviceImpl\RelationServiceImpl.class
 com\sms\repository\user_management\UserRepository.class
 com\sms\services\user_management\serviceImpl\AuthoritiesServiceImpl.class
@@ -10,9 +11,12 @@ com\sms\repository\user_management\RoleRepository.class
 com\sms\services\user_management\serviceImpl\ScreenServiceImpl.class
 com\sms\pojo\AuthoritiesPojo.class
 com\sms\services\user_management\RoleService.class
+com\sms\model\user_management\Course.class
 com\sms\repository\user_management\AuthoritiesRepository.class
 com\sms\pojo\UserPojo.class
+com\sms\model\user_management\Course$CourseBuilder.class
 com\sms\pojo\RolePojo.class
+com\sms\model\user_management\Period$PeriodBuilder.class
 com\sms\model\user_management\User.class
 com\sms\filter\RequestSourceFilter.class
 com\sms\repository\user_management\RelationRepository.class
@@ -21,6 +25,7 @@ com\sms\Main.class
 com\sms\model\user_management\StudentGradeHistory.class
 com\sms\pojo\ScreenPojo.class
 com\sms\pojo\UserDetailsPojo.class
+com\sms\model\user_management\Period.class
 com\sms\model\user_management\Role.class
 com\sms\services\user_management\AuthoritiesService.class
 com\sms\repository\user_management\ScreenRepository.class
@@ -28,6 +33,7 @@ com\sms\pojo\RelationPojo.class
 com\sms\model\user_management\Relation.class
 com\sms\services\user_management\serviceImpl\UserServiceImpl.class
 com\sms\model\user_management\Screen.class
+com\sms\enums\user_management\GradeEnum.class
 com\sms\response\SmsResponse$SmsResponseBuilder.class
 com\sms\services\user_management\ScreenService.class
 com\sms\services\user_management\RelationService.class

@@ -12,3 +12,4 @@ spring:
           uri: lb://COURSE-SERVICE
           predicates:
             - Path=/api/courses/**
+            - Path=/api/periods/**

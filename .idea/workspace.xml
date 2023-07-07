@@ -5,28 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77a028fd-96dc-48b3-a15b-36b8b534c2d1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/enums/user_management/GradeEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/enums/user_management/PeriodEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/model/user_management/Course.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/model/user_management/Period.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/config/FilterConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/controller/CourseControler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/controller/PeriodsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/handler/CourseControllerAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/repository/CourseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/repository/PeriodRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/service/CourseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/service/PeriodService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/service/serviceImpl/CourseServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/service/serviceImpl/PeriodServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sms/userservice/config/SwaggerConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/common-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/common-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/common-1.0.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/common-1.0.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/CourseServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/CourseServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sms/userservice/UserServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sms/userservice/UserServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,10 +66,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sms.userservice.config" />
       <recent name="com.sms.courseservice.config" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CourseServiceApplication">
+  <component name="RunManager" selected="Application.UserServiceApplication">
     <configuration name="AuthServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sms.authservice.AuthServiceApplication" />
       <module name="auth-service" />
@@ -161,10 +151,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CourseServiceApplication" />
-        <item itemvalue="Application.AuthServiceApplication" />
-        <item itemvalue="Application.GatewayServerApplication" />
         <item itemvalue="Application.UserServiceApplication" />
+        <item itemvalue="Application.GatewayServerApplication" />
+        <item itemvalue="Application.AuthServiceApplication" />
+        <item itemvalue="Application.CourseServiceApplication" />
         <item itemvalue="Application.ConfigServerApplication" />
       </list>
     </recent_temporary>

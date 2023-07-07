@@ -16,7 +16,7 @@ public class GlobalHandler {
     public ResponseEntity<?> notFoundException(NotFoundException notFoundException){
 
         SmsResponse smsResponse = SmsResponse.builder()
-                .status(true)
+                .status(false)
                 .message(notFoundException.getMessage())
 //                .payload(notFoundException)
                 .build();
@@ -28,7 +28,7 @@ public class GlobalHandler {
     public ResponseEntity<?> alreadyExistException(AlreadyExistException alreadyExistException){
 
         SmsResponse smsResponse = SmsResponse.builder()
-                .status(true)
+                .status(false)
                 .message(alreadyExistException.getMessage())
 //                .payload(alreadyExistException)
                 .build();

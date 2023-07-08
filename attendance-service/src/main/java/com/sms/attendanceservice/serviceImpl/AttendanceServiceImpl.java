@@ -2,6 +2,7 @@ package com.sms.attendanceservice.serviceImpl;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sms.attendanceservice.model.Attendance;
 import com.sms.attendanceservice.pojo.AttendancePojo;
+import com.sms.attendanceservice.pojo.DateTimePojo;
 import com.sms.attendanceservice.repository.AttendanceRepository;
 import com.sms.attendanceservice.service.AttendanceService;
 import com.sms.exception.NotFoundException;
@@ -12,11 +13,20 @@ import com.sms.repository.user_management.UserRepository;
 import com.sms.response.SmsResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.reactive.function.client.WebClientResponseException;;
 import javax.servlet.http.HttpServletRequest;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -37,46 +47,57 @@ public class AttendanceServiceImpl implements AttendanceService {
 
     @Autowired
     private WebClient.Builder webClientBuilder;
-    @Override
-    public Attendance checkInOutAttendance(Long userId, HttpServletRequest request) {
 
-        System.out.println("checkInOutAttendance running------------>");
+    @Override
+    public AttendancePojo checkInOutAttendance(Long userId, HttpServletRequest request) {
 
         SmsResponse res = null;
-        //CHECKIN
-//        if (userId==null){
-        try{
+        try {
             res = webClientBuilder.build()
                     .get()
-                    .uri("http://USER-SERVICE/api/users/fetch/"+userId)
-                    .headers(header->{
-                        header.set(headerName,headerValue);
+                    .uri("http://USER-SERVICE/api/users/fetch/" + userId)
+                    .headers(header -> {
+                        header.set(headerName, headerValue);
                         header.set("Authorization", request.getHeader("Authorization"));
                     })
                     .retrieve()
                     .bodyToMono(SmsResponse.class)
                     .block();
 
-                ObjectMapper mapper = new ObjectMapper();
-                UserPojo userPojo = mapper.convertValue(res.getPayload(),UserPojo.class);
-                Role role=new Role();
-                role.setRoleId(userPojo.getRoleId());
-                User user=new User(userPojo.getUserId(),userPojo.getFirstName(),userPojo.getLastName(),userPojo.getEmail(),userPojo.getPassword(),role);
+            ObjectMapper mapper = new ObjectMapper();
+            UserPojo userPojo = mapper.convertValue(res.getPayload(), UserPojo.class);
+            Role role = new Role();
+            role.setRoleId(userPojo.getRoleId());
+            User user = new User(userPojo.getUserId(), userPojo.getFirstName(), userPojo.getLastName(), userPojo.getEmail(), userPojo.getPassword(), role);
 
-                Optional<Attendance> attendanceOptional=attendanceRepo.getAttendanceByCheckInAndUserId(userId);
-                if(!attendanceOptional.isPresent()) {
-                    Attendance attendance = Attendance.builder()
-                            .checkIn(LocalDateTime.now())
-                            .user(user)
-                            .build();
-                    return attendanceRepo.save(attendance);
-                }else{
-                    Attendance attendance=attendanceOptional.get();
-                    attendance.setUser(user);
-                    attendance.setCheckOut(LocalDateTime.now());
-                    return attendanceRepo.save(attendance);
-                }
-        }catch(WebClientResponseException exception){
+            Optional<Attendance> attendanceOptional = attendanceRepo.getAttendanceByCheckInAndUserId(userId);
+
+            if (!attendanceOptional.isPresent()) {
+                Attendance attendance = Attendance.builder()
+                        .checkIn(LocalDateTime.now())
+                        .user(user)
+                        .build();
+                attendanceRepo.save(attendance);
+                AttendancePojo pojo = new AttendancePojo();
+                pojo.setAttendanceId(attendance.getAttendanceId());
+                pojo.setUserId(attendance.getUser().getUserId());
+                pojo.setCheckIn(attendance.getCheckIn());
+                pojo.setSubjectCode(attendance.getSubjectCode());
+                return pojo;
+            } else {
+                Attendance attendanceCheckOut = attendanceOptional.get();
+                attendanceCheckOut.setUser(user);
+                attendanceCheckOut.setCheckOut(LocalDateTime.now());
+                attendanceRepo.save(attendanceCheckOut);
+
+                AttendancePojo pojo = new AttendancePojo();
+                pojo.setAttendanceId(attendanceCheckOut.getAttendanceId());
+                pojo.setUserId(attendanceCheckOut.getUser().getUserId());
+                pojo.setCheckOut(attendanceCheckOut.getCheckOut());
+                pojo.setSubjectCode(attendanceCheckOut.getSubjectCode());
+                return pojo;
+            }
+        } catch (WebClientResponseException exception) {
             throw new NotFoundException("user id not found");
         }
     }
@@ -96,7 +117,7 @@ public class AttendanceServiceImpl implements AttendanceService {
                     return pojo;
                 }).collect(Collectors.toList());
 
-        if (attendancePojo.isEmpty()){
+        if (attendancePojo.isEmpty()) {
             throw new NotFoundException("this user not attended yet");
         }
         return attendancePojo;
@@ -106,8 +127,6 @@ public class AttendanceServiceImpl implements AttendanceService {
     public List<AttendancePojo> getAllAttendance() {
 
         List<Attendance> listOfAttendance = attendanceRepo.findAll();
-
-
 
         List<AttendancePojo> attendancePojo = listOfAttendance.stream()
                 .map(attendance -> {
@@ -129,10 +148,9 @@ public class AttendanceServiceImpl implements AttendanceService {
 
         System.out.println("getByAttendanceId running------------>");
         Optional<Attendance> attendance = attendanceRepo.findById(attendanceId);
-        if(!attendance.isPresent()){
+        if (!attendance.isPresent()) {
             throw new NotFoundException("this is userId is not Found in Database");
         }
-
         AttendancePojo attendancePojo = new AttendancePojo();
         attendancePojo.setAttendanceId(attendance.get().getAttendanceId());
 //        attendancePojo.setUserId(attendance.get().getUserId());
@@ -144,17 +162,55 @@ public class AttendanceServiceImpl implements AttendanceService {
     }
 
 
-
-
     @Override
-    public List<Attendance> getAllAttendanceBetweenDates(String from, String to) {
-        return null;
+    public List<AttendancePojo> getAllAttendanceBetweenDates(DateTimePojo dateTimePojo) {
+
+
+                if (dateTimePojo.getFrom() == null && dateTimePojo.getTo() == null) {
+                    throw new NotFoundException("date field cannot be empty");
+                }
+
+
+                List<Attendance> attendancesList = attendanceRepo.getAllAttendanceBetweenDates(dateTimePojo.getFrom(), dateTimePojo.getTo()).get();
+                if (attendancesList.isEmpty()) {
+                    throw new NotFoundException("there is no attendance between given dates");
+                }
+                List<AttendancePojo> attendancePojos = attendancesList.stream().map(
+                        attendances -> {
+                            AttendancePojo pojo = new AttendancePojo();
+                            pojo.setAttendanceId(attendances.getAttendanceId());
+                            pojo.setUserId(attendances.getUser().getUserId());
+                            pojo.setCheckIn(attendances.getCheckIn());
+                            pojo.setCheckOut(attendances.getCheckOut());
+                            return pojo;
+                        }).collect(Collectors.toList());
+                return attendancePojos;
     }
 
     @Override
-    public List<Attendance> getAllAttendanceBetweenDatesByUserId(Long userId, String from, String to) {
-        return null;
+    public List<AttendancePojo> getAllAttendanceBetweenDatesByUserId(Long userId, DateTimePojo dateTimePojo) {
+
+        if (dateTimePojo.getFrom() == null && dateTimePojo.getTo() == null && userId == null) {
+            throw new NotFoundException("date field and userId field cannot be empty");
+        }
+
+        List<Attendance> userAttendanceList = attendanceRepo.getAllAttendanceBetweenDatesByUserId(userId, dateTimePojo.getFrom(),dateTimePojo.getTo()).get();
+
+        if (userAttendanceList.isEmpty()) {
+            throw new NotFoundException("there is no attendance between given dates");
+        }
+        List<AttendancePojo> attendancePojos = userAttendanceList.stream().map(
+                attendances -> {
+                    AttendancePojo pojo = new AttendancePojo();
+                    pojo.setAttendanceId(attendances.getAttendanceId());
+                    pojo.setUserId(attendances.getUser().getUserId());
+                    pojo.setCheckIn(attendances.getCheckIn());
+                    pojo.setCheckOut(attendances.getCheckOut());
+                    return pojo;
+                }).collect(Collectors.toList());
+
+        return attendancePojos;
     }
+
+
 }
-
-

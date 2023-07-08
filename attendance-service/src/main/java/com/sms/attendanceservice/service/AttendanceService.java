@@ -2,6 +2,7 @@ package com.sms.attendanceservice.service;
 
 import com.sms.attendanceservice.model.Attendance;
 import com.sms.attendanceservice.pojo.AttendancePojo;
+import com.sms.attendanceservice.pojo.DateTimePojo;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
@@ -11,7 +12,7 @@ import java.util.List;
 @Service
 public interface AttendanceService {
 
-    Attendance checkInOutAttendance(Long userId, HttpServletRequest request);
+    AttendancePojo checkInOutAttendance(Long userId, HttpServletRequest request);
 
     List<AttendancePojo> getAllAttendance();
 
@@ -21,8 +22,8 @@ public interface AttendanceService {
 
 
 
-    List<Attendance> getAllAttendanceBetweenDates(String from, String to);
+    List<AttendancePojo> getAllAttendanceBetweenDates(DateTimePojo dateTimePojo);
 
-    List<Attendance> getAllAttendanceBetweenDatesByUserId(Long userId,String from, String to);
+    List<AttendancePojo> getAllAttendanceBetweenDatesByUserId(Long userId,DateTimePojo dateTimePojo);
 
 }

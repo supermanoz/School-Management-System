@@ -1,11 +1,11 @@
 # School Management System
 
 ##### Table of Content :
-* **About the project**
-    * **Built With**
-* **Getting started**
-    * **Prerequisites**
-* **Contact**
+* **[About the project](#about-the-project)**
+    * **[Built With](#built-with)**
+* **[Getting started](#getting-started)**
+    * **[Prerequisites](#prerequisites)**
+* **[Contact](#contact)**
 
 
 ## About the Project
@@ -34,6 +34,9 @@ Reload the maven after cloning the repository.
 
 ### Contact
 ##### Manoj Basnet - <basnetm02@gmail.com>
+
+
+[top](#school-management-system)
 
 
 

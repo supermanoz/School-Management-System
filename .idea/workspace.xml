@@ -5,9 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77a028fd-96dc-48b3-a15b-36b8b534c2d1" name="Changes" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/controller/AttendanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/controller/AttendanceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/serviceImpl/AttendanceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/serviceImpl/AttendanceServiceImpl.java" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sms/userservice/config/SwaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/CourseServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/CourseServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sms/userservice/UserServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sms/userservice/UserServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" afterDir="false" />
+>>>>>>> f6abc26a149fc7b600078848304bea04278a3970
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,11 +70,15 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;database.data.extractors.current.export.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
+<<<<<<< HEAD
     &quot;last_opened_file_path&quot;: &quot;E:/JAVA/SPRING SECURITY/SpringSecurity/student-management-system&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+=======
+    &quot;last_opened_file_path&quot;: &quot;F:/GitHub/School-Management-System/course-service&quot;,
+>>>>>>> f6abc26a149fc7b600078848304bea04278a3970
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -74,13 +92,49 @@
     ]
   }
 }</component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Spring Boot.AttendanceServiceApplication">
+=======
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sms.userservice.config" />
+      <recent name="com.sms.courseservice.config" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.UserServiceApplication">
+>>>>>>> f6abc26a149fc7b600078848304bea04278a3970
     <configuration name="AuthServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sms.authservice.AuthServiceApplication" />
       <module name="auth-service" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.sms.authservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sms.configserver.ConfigServerApplication" />
+      <module name="config-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sms.configserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CourseServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sms.courseservice.CourseServiceApplication" />
+      <module name="course-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sms.courseservice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -188,10 +242,15 @@
     </list>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
         <item itemvalue="Spring Boot.AttendanceServiceApplication" />
+=======
+        <item itemvalue="Application.UserServiceApplication" />
+>>>>>>> f6abc26a149fc7b600078848304bea04278a3970
         <item itemvalue="Application.GatewayServerApplication" />
         <item itemvalue="Application.AuthServiceApplication" />
-        <item itemvalue="Application.UserServiceApplication" />
+        <item itemvalue="Application.CourseServiceApplication" />
+        <item itemvalue="Application.ConfigServerApplication" />
       </list>
     </recent_temporary>
   </component>

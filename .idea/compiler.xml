@@ -7,6 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+<<<<<<< HEAD
+=======
+        <module name="course-service" />
+        <module name="gateway-server" />
+>>>>>>> f6abc26a149fc7b600078848304bea04278a3970
         <module name="config-server" />
         <module name="auth-service" />
         <module name="discovery-server" />
@@ -27,7 +32,11 @@
       <module name="auth-service" options="-parameters" />
       <module name="common" options="-parameters" />
       <module name="config-server" options="-parameters" />
+<<<<<<< HEAD
       <module name="discovery-server" options="-parameters" />
+=======
+      <module name="course-service" options="-parameters" />
+>>>>>>> f6abc26a149fc7b600078848304bea04278a3970
       <module name="gateway-server" options="-parameters" />
       <module name="user-service" options="-parameters" />
     </option>

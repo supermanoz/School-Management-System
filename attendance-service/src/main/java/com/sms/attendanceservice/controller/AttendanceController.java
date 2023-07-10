@@ -1,17 +1,14 @@
 package com.sms.attendanceservice.controller;
 
-import com.sms.attendanceservice.model.Attendance;
 import com.sms.attendanceservice.pojo.AttendancePojo;
 import com.sms.attendanceservice.pojo.DateTimePojo;
 import com.sms.attendanceservice.service.AttendanceService;
 import com.sms.response.SmsResponse;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -31,7 +28,7 @@ public class AttendanceController {
      * @Method checkInOutAttendance
      */
     @GetMapping("/checkInOut")
-    public ResponseEntity<SmsResponse> checkInOutAttendance(@RequestParam("userId") Long userId, HttpServletRequest request) {
+    public ResponseEntity<SmsResponse> checkInOutAttendance(@RequestParam(required = false )  Long userId, HttpServletRequest request) {
         System.out.println("Hello- i'm controller -------------------->");
 
         AttendancePojo checkInOutAttendance = attendanceService.checkInOutAttendance(userId, request);

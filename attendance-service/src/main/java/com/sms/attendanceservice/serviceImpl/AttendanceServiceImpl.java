@@ -13,20 +13,11 @@ import com.sms.repository.user_management.UserRepository;
 import com.sms.response.SmsResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.reactive.function.client.WebClientResponseException;;
 import javax.servlet.http.HttpServletRequest;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Collections;
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -49,7 +40,7 @@ public class AttendanceServiceImpl implements AttendanceService {
     private WebClient.Builder webClientBuilder;
 
     @Override
-    public AttendancePojo checkInOutAttendance(Long userId, HttpServletRequest request) {
+    public AttendancePojo checkInOutAttendance( Long userId, HttpServletRequest request) {
 
         SmsResponse res = null;
         try {

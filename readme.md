@@ -10,6 +10,7 @@
 
 ## About the Project
 
+A school management system for practicing concepts of microservices using java, Spring Boot framework.
 
 
 ### Built With

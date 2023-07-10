@@ -40,7 +40,6 @@ Reload the maven after cloning the repository.
 [top](#school-management-system)
 
 
-git 
  
  
  

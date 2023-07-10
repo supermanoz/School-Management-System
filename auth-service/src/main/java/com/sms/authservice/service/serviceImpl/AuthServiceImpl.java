@@ -4,6 +4,8 @@ import com.sms.authservice.dto.AuthRequest;
 import com.sms.authservice.dto.AuthResponse;
 import com.sms.authservice.service.AuthService;
 import com.sms.authservice.util.JwtUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -14,6 +16,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class AuthServiceImpl implements AuthService {
+    private static Logger LOGGER= LoggerFactory.getLogger(AuthServiceImpl.class);
     @Autowired
     private JwtUtil jwtUtil;
     @Autowired
@@ -21,12 +24,12 @@ public class AuthServiceImpl implements AuthService {
     @Autowired
     private UserDetailsService userDetailsService;
     @Override
-    public AuthResponse getToken(AuthRequest user) throws Exception{
+    public AuthResponse getToken(AuthRequest user) throws Exception {
+        LOGGER.trace("Entered Email: "+user.getEmail()+", Password: "+user.getPassword());
         try{
-            System.out.println(user.getEmail()+" "+user.getPassword());
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(user.getEmail(),user.getPassword()));
-        }catch (BadCredentialsException e){
-            throw new Exception("Username or password wrong!");
+        }catch(BadCredentialsException e){
+            throw new Exception("Email or Password Wrong");
         }
         UserDetails userDetails=userDetailsService.loadUserByUsername(user.getEmail());
         return new AuthResponse(jwtUtil.generateToken(userDetails));

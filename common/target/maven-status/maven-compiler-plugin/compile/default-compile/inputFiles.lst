@@ -1,5 +1,6 @@
 F:\GitHub\School-Management-System\common\src\main\java\com\sms\services\user_management\ScreenService.java
 F:\GitHub\School-Management-System\common\src\main\java\com\sms\Main.java
+F:\GitHub\School-Management-System\common\src\main\java\com\sms\model\user_management\Period.java
 F:\GitHub\School-Management-System\common\src\main\java\com\sms\exception\NotFoundException.java
 F:\GitHub\School-Management-System\common\src\main\java\com\sms\repository\user_management\UserRepository.java
 F:\GitHub\School-Management-System\common\src\main\java\com\sms\services\user_management\UserService.java
@@ -7,12 +8,15 @@ F:\GitHub\School-Management-System\common\src\main\java\com\sms\repository\user_
 F:\GitHub\School-Management-System\common\src\main\java\com\sms\repository\user_management\ScreenRepository.java
 F:\GitHub\School-Management-System\common\src\main\java\com\sms\pojo\RolePojo.java
 F:\GitHub\School-Management-System\common\src\main\java\com\sms\pojo\AuthoritiesPojo.java
+F:\GitHub\School-Management-System\common\src\main\java\com\sms\enums\user_management\GradeEnum.java
 F:\GitHub\School-Management-System\common\src\main\java\com\sms\model\user_management\Screen.java
 F:\GitHub\School-Management-System\common\src\main\java\com\sms\services\user_management\serviceImpl\RelationServiceImpl.java
 F:\GitHub\School-Management-System\common\src\main\java\com\sms\pojo\UserDetailsPojo.java
 F:\GitHub\School-Management-System\common\src\main\java\com\sms\services\user_management\AuthoritiesService.java
 F:\GitHub\School-Management-System\common\src\main\java\com\sms\model\user_management\Relation.java
 F:\GitHub\School-Management-System\common\src\main\java\com\sms\services\user_management\RoleService.java
+F:\GitHub\School-Management-System\common\src\main\java\com\sms\enums\user_management\PeriodEnum.java
+F:\GitHub\School-Management-System\common\src\main\java\com\sms\model\user_management\Course.java
 F:\GitHub\School-Management-System\common\src\main\java\com\sms\model\user_management\StudentGradeHistory.java
 F:\GitHub\School-Management-System\common\src\main\java\com\sms\services\user_management\serviceImpl\ScreenServiceImpl.java
 F:\GitHub\School-Management-System\common\src\main\java\com\sms\services\user_management\RelationService.java

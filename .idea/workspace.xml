@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77a028fd-96dc-48b3-a15b-36b8b534c2d1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/enums/user_management/GradeEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/enums/user_management/GradeEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/enums/user_management/PeriodEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/enums/user_management/PeriodEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Course$CourseBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Course$CourseBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Course.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Period$PeriodBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Period$PeriodBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Period.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Period.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/common-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/common-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/common-1.0.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/common-1.0.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +214,7 @@
       <workItem from="1688792887191" duration="2482000" />
       <workItem from="1688828734514" duration="4946000" />
       <workItem from="1688881238597" duration="1708000" />
-      <workItem from="1688963044057" duration="12012000" />
+      <workItem from="1688963044057" duration="12767000" />
     </task>
     <servers />
   </component>

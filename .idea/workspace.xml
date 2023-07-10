@@ -5,17 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77a028fd-96dc-48b3-a15b-36b8b534c2d1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/config/SwaggerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sms/userservice/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/enums/user_management/TermEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/model/user_management/Academic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/pojo/AcademicPojo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/pojo/CoursePojo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/pojo/PeriodPojo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/config/WebClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/controller/AcademicController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/repository/AcademicRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/service/AcademicService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/service/serviceImpl/AcademicServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/model/user_management/Authorities.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/model/user_management/Authorities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/model/user_management/Relation.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/model/user_management/Relation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/model/user_management/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/model/user_management/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/model/user_management/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/model/user_management/Screen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/model/user_management/StudentGradeHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/model/user_management/StudentGradeHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/model/user_management/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/model/user_management/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/pojo/UserPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/pojo/UserPojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Authorities.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Authorities.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Relation.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Relation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Screen.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Screen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/StudentGradeHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/StudentGradeHistory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/pojo/UserPojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/pojo/UserPojo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/common-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/common-1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/common-1.0.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/common-1.0.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/course-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/CourseServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/CourseServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/course-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sms/userservice/UserServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sms/userservice/UserServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sms/userservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sms/userservice/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sms/userservice/handler/UserServiceControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sms/userservice/handler/UserServiceControllerAdvice.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +48,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -70,7 +95,7 @@
       <recent name="com.sms.courseservice.config" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.UserServiceApplication">
+  <component name="RunManager" selected="Application.CourseServiceApplication">
     <configuration name="AuthServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sms.authservice.AuthServiceApplication" />
       <module name="auth-service" />
@@ -151,10 +176,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CourseServiceApplication" />
         <item itemvalue="Application.UserServiceApplication" />
         <item itemvalue="Application.GatewayServerApplication" />
         <item itemvalue="Application.AuthServiceApplication" />
-        <item itemvalue="Application.CourseServiceApplication" />
         <item itemvalue="Application.ConfigServerApplication" />
       </list>
     </recent_temporary>

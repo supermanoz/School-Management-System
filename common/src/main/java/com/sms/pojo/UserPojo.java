@@ -1,6 +1,8 @@
 package com.sms.pojo;
 
+import com.sms.enums.user_management.UserEnum;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -10,6 +12,7 @@ import javax.validation.constraints.Size;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class UserPojo {
 
     private Long userId;
@@ -18,13 +21,7 @@ public class UserPojo {
 
     private String lastName;
 
-    @Email
     private String email;
 
-    @Size(min = 8, max = 40)
-    private String password;
-
-
-    private Long roleId;
-
+    private UserEnum role;
 }

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@localhost">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.48">
+    <root id="1">
+      <DefaultCasing>lower/lower</DefaultCasing>
+      <ServerVersion>8.0.28</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="bookstore"/>
+    <schema id="3" parent="1" name="employee_management_system"/>
+    <schema id="4" parent="1" name="information_schema"/>
+    <schema id="5" parent="1" name="lms"/>
+    <schema id="6" parent="1" name="microservices"/>
+    <schema id="7" parent="1" name="mysql"/>
+    <schema id="8" parent="1" name="performance_schema"/>
+    <schema id="9" parent="1" name="security"/>
+    <schema id="10" parent="1" name="sms_demo_security"/>
+    <schema id="11" parent="1" name="sms_dev"/>
+    <schema id="12" parent="1" name="student_management_system"/>
+  </database-model>
+</dataSource>

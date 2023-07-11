@@ -21,4 +21,9 @@ public class PeriodsController {
     public ResponseEntity<SmsResponse> fetchAll(){
         return ResponseEntity.ok().body(new SmsResponse("List of periods",true,periodService.fetchAll()));
     }
+
+    @GetMapping("/fetchByCurrentTime")
+    public ResponseEntity<SmsResponse> fetchByCurrentTime(){
+        return ResponseEntity.ok().body(new SmsResponse("Period of current time",true,periodService.getByCurrentTime()));
+    }
 }

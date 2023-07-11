@@ -7,6 +7,7 @@ import com.sms.enums.user_management.GradeEnum;
 import com.sms.enums.user_management.TermEnum;
 import com.sms.enums.user_management.UserEnum;
 import com.sms.exception.NotFoundException;
+import com.sms.pojo.AcademicDto;
 import com.sms.pojo.AcademicPojo;
 import com.sms.pojo.UserPojo;
 import com.sms.response.SmsResponse;
@@ -105,6 +106,11 @@ public class AcademicServiceImpl implements AcademicService {
             );
         });
         return academicRes;
+    }
+
+    @Override
+    public List<AcademicDto> getByUserIdAndGrade(Long userId, GradeEnum grade) {
+        return academicRepository.getByUserIdAndGrade(userId,grade.name());
     }
 
     private UserPojo getByUserId(Long userId,List<Map<String,Object>> users){

@@ -6,8 +6,10 @@ import com.sms.attendanceservice.pojo.DateTimePojo;
 import com.sms.attendanceservice.repository.AttendanceRepository;
 import com.sms.attendanceservice.service.AttendanceService;
 import com.sms.exception.NotFoundException;
+import com.sms.model.user_management.Course;
 import com.sms.model.user_management.Role;
 import com.sms.model.user_management.User;
+import com.sms.pojo.CoursePojo;
 import com.sms.pojo.UserPojo;
 import com.sms.repository.user_management.UserRepository;
 import com.sms.response.SmsResponse;
@@ -112,9 +114,9 @@ public class AttendanceServiceImpl implements AttendanceService {
 
             ObjectMapper mapper = new ObjectMapper();
             UserPojo userPojo = mapper.convertValue(res.getPayload(), UserPojo.class);
-            Role role = new Role();
-            role.setRoleId(userPojo.getRoleId());
-            User user = new User(userPojo.getUserId(), userPojo.getFirstName(), userPojo.getLastName(), userPojo.getEmail(), userPojo.getPassword(), role);
+//            Role role = new Role();
+//            role.setRoleId(userPojo.getUserId());
+            User user = new User(userPojo.getUserId(), userPojo.getFirstName(), userPojo.getLastName(), userPojo.getEmail(),userPojo.getRole());
 
             Optional<Attendance> attendanceOptional = attendanceRepo.getAttendanceByCheckInAndUserId(userId);
 
@@ -131,15 +133,15 @@ public class AttendanceServiceImpl implements AttendanceService {
 
                 SmsResponse courseRes = webClientBuilder.build()
                         .get()
-                        .uri("http://academic-service/api/courses/fetch/"+attendance.getCourseId())
+                        .uri("http://localhost:8093/api/periods/fetchByCurrentTime")
                         .retrieve()
                         .bodyToMono(SmsResponse.class)
                         .block();
 
                 ObjectMapper courseMapper = new ObjectMapper();
-               UserPojo userPojo1  = courseMapper.convertValue(courseRes.getPayload(), UserPojo.class);
+               CoursePojo coursePojo = courseMapper.convertValue(courseRes.getPayload(), CoursePojo.class);
 
-               System.out.println(userPojo1.toString()+"------------->");
+               System.out.println(coursePojo.toString()+"------------->");
 
                 pojo.setPeriod(attendance.getPeriod());
                 return pojo;
@@ -154,7 +156,7 @@ public class AttendanceServiceImpl implements AttendanceService {
                 pojo.setAttendanceId(attendanceCheckOut.getAttendanceId());
                 pojo.setUserId(attendanceCheckOut.getUserId());
                 pojo.setCheckOut(attendanceCheckOut.getCheckOut());
-                pojo.setCourseId(attendanceCheckOut.getCourseId());
+                pojo.setPeriod(attendanceCheckOut.getPeriod());
                 return pojo;
             }
         } catch (WebClientResponseException exception) {
@@ -173,7 +175,7 @@ public class AttendanceServiceImpl implements AttendanceService {
                     pojo.setUserId(attendance.getUserId());
                     pojo.setCheckIn(attendance.getCheckIn());
                     pojo.setCheckOut(attendance.getCheckOut());
-                    pojo.setCourseId(attendance.getCourseId());
+                    pojo.setPeriod(attendance.getPeriod());
                     return pojo;
                 }).collect(Collectors.toList());
 

@@ -5,48 +5,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77a028fd-96dc-48b3-a15b-36b8b534c2d1" name="Changes" comment="">
-<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/92ddf2cb-d0cb-4794-b5ee-88ca44de7825.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/92ddf2cb-d0cb-4794-b5ee-88ca44de7825.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/fb68a2b8-c775-4d8d-bf76-8173b1ea5599.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fb68a2b8-c775-4d8d-bf76-8173b1ea5599.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/controller/AttendanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/controller/AttendanceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/model/Attendance.java" beforeDir="false" afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/model/Attendance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/pojo/AttendancePojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/pojo/AttendancePojo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/serviceImpl/AttendanceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/attendance-service/src/main/java/com/sms/attendanceservice/serviceImpl/AttendanceServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/attendance-service/target/classes/com/sms/attendanceservice/controller/AttendanceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/attendance-service/target/classes/com/sms/attendanceservice/controller/AttendanceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/attendance-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/attendance-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/attendance-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/attendance-service/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/attendance-service/target/classes/com/sms/attendanceservice/model/Attendance$AttendanceBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/attendance-service/target/classes/com/sms/attendanceservice/model/Attendance$AttendanceBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/attendance-service/target/classes/com/sms/attendanceservice/model/Attendance.class" beforeDir="false" afterPath="$PROJECT_DIR$/attendance-service/target/classes/com/sms/attendanceservice/model/Attendance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/attendance-service/target/classes/com/sms/attendanceservice/pojo/AttendancePojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/attendance-service/target/classes/com/sms/attendanceservice/pojo/AttendancePojo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/attendance-service/target/classes/com/sms/attendanceservice/serviceImpl/AttendanceServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/attendance-service/target/classes/com/sms/attendanceservice/serviceImpl/AttendanceServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/enums/user_management/GradeEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/enums/user_management/GradeEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/enums/user_management/PeriodEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/enums/user_management/PeriodEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/model/user_management/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/model/user_management/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/exception/AlreadyExistException.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/exception/AlreadyExistException.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/filter/RequestSourceFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/filter/RequestSourceFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Course$CourseBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Course$CourseBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Course.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Period$PeriodBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Period$PeriodBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Period.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Period.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Authorities.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Authorities.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Relation.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Relation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Screen.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Screen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/StudentGradeHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/StudentGradeHistory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/pojo/UserPojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/pojo/UserPojo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/repository/user_management/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/repository/user_management/UserRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/response/SmsResponse$SmsResponseBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/response/SmsResponse$SmsResponseBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/response/SmsResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/response/SmsResponse.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/serviceImpl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/serviceImpl/UserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/target/common-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/common-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/target/common-1.0.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/common-1.0.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/src/main/resources/application.properties" afterDir="false" />
-=======
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/pojo/AcademicDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/model/user_management/Academic.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/model/user_management/Academic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/controller/AcademicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/controller/AcademicController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/controller/PeriodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/controller/PeriodsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/repository/AcademicRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/repository/AcademicRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/repository/PeriodRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/repository/PeriodRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/service/AcademicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/service/AcademicService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/service/PeriodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/service/PeriodService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/service/serviceImpl/AcademicServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/service/serviceImpl/AcademicServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/service/serviceImpl/PeriodServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/src/main/java/com/sms/courseservice/service/serviceImpl/PeriodServiceImpl.java" afterDir="false" />
->>>>>>> dev
+      <change beforePath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/target/classes/com/sms/courseservice/CourseServiceApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/target/classes/com/sms/courseservice/config/FilterConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/target/classes/com/sms/courseservice/config/SwaggerConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/target/classes/com/sms/courseservice/controller/CourseControler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/target/classes/com/sms/courseservice/controller/PeriodsController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/target/classes/com/sms/courseservice/handler/CourseControllerAdvice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/target/classes/com/sms/courseservice/repository/CourseRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/target/classes/com/sms/courseservice/repository/PeriodRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/target/classes/com/sms/courseservice/service/CourseService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/target/classes/com/sms/courseservice/service/PeriodService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/target/classes/com/sms/courseservice/service/serviceImpl/CourseServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/target/classes/com/sms/courseservice/service/serviceImpl/PeriodServiceImpl.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +86,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RequestMappingsPanelOrder0": "0",
@@ -95,41 +96,19 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
     "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "E:/Micro-service-java/School-Management-System/course-service",
+    "last_opened_file_path": "E:/Micro-service-java/School-Management-System/academic-service",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "database.query.execution",
-    "spring.configuration.checksum": "ca7849804da0401b11867a9ac52c282e",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "spring.configuration.checksum": "a82474e5d4af35a88dca27b9b5578fd7",
     "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
-    ]
   }
 }]]></component>
-  <component name="RunManager" selected="Spring Boot.AttendanceServiceApplication">
-=======
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/GitHub/School-Management-System/course-service&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
-  }
-}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.sms.pojo" />
@@ -137,8 +116,14 @@
       <recent name="com.sms.courseservice.config" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CourseServiceApplication">
->>>>>>> dev
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.AttendanceServiceApplication">
     <configuration name="AuthServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sms.authservice.AuthServiceApplication" />
       <module name="auth-service" />
@@ -217,16 +202,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-<<<<<<< HEAD
-    <configuration name="AttendanceServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="AttendanceServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="attendance-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sms.attendanceservice.AttendanceServiceApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sms.attendanceservice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -274,6 +252,8 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.ConfigServerApplication" />
+      <item itemvalue="Application.CourseServiceApplication" />
       <item itemvalue="Application.AuthServiceApplication" />
       <item itemvalue="Application.GatewayServerApplication" />
       <item itemvalue="Application.UserServiceApplication" />
@@ -285,8 +265,6 @@
       <item itemvalue="Spring Boot.UserServiceApplication" />
       <item itemvalue="Spring Boot.AttendanceServiceApplication" />
     </list>
-=======
->>>>>>> dev
     <recent_temporary>
       <list>
         <item itemvalue="Application.CourseServiceApplication" />
@@ -305,24 +283,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1688036022093</updated>
-<<<<<<< HEAD
-      <workItem from="1688491839745" duration="771000" />
-      <workItem from="1688492622797" duration="4787000" />
-      <workItem from="1688524162708" duration="3567000" />
-      <workItem from="1688530629907" duration="18057000" />
-      <workItem from="1688567858247" duration="598000" />
-      <workItem from="1688610734150" duration="6740000" />
-      <workItem from="1688618974608" duration="16777000" />
-      <workItem from="1688696947711" duration="24375000" />
-      <workItem from="1688736070945" duration="10466000" />
-      <workItem from="1688792887191" duration="2482000" />
-      <workItem from="1688828734514" duration="4946000" />
-      <workItem from="1688881238597" duration="1708000" />
-      <workItem from="1688963044057" duration="14975000" />
-      <workItem from="1689042910043" duration="7300000" />
-=======
->>>>>>> dev
+      <workItem from="1689066860452" duration="455000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>

@@ -8,7 +8,7 @@ spring:
           uri: lb://USER-SERVICE
           predicates:
             - Path=/api/users/**
-        - id: course-service
-          uri: lb://COURSE-SERVICE
+        - id: academic-service
+          uri: lb://ACADEMIC-SERVICE
           predicates:
-            - Path=/api/courses/**,/api/periods/**
+            - Path=/api/courses/**,/api/periods/**,/api/academics/**

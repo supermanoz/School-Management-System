@@ -18,6 +18,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.reactive.function.client.WebClientResponseException;;
 import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -38,6 +39,60 @@ public class AttendanceServiceImpl implements AttendanceService {
 
     @Autowired
     private WebClient.Builder webClientBuilder;
+
+  /*  @Override
+    public AttendancePojo checkInOutAttendance( Long userId, HttpServletRequest request) {
+
+        SmsResponse res = null;
+        try {
+            res = webClientBuilder.build()
+                    .get()
+                    .uri("http://USER-SERVICE/api/users/fetch/" + userId)
+                    .headers(header -> {
+                        header.set(headerName, headerValue);
+                        header.set("Authorization", request.getHeader("Authorization"));
+                    })
+                    .retrieve()
+                    .bodyToMono(SmsResponse.class)
+                    .block();
+
+            ObjectMapper mapper = new ObjectMapper();
+            UserPojo userPojo = mapper.convertValue(res.getPayload(), UserPojo.class);
+            Role role = new Role();
+            role.setRoleId(userPojo.getRoleId());
+            User user = new User(userPojo.getUserId(), userPojo.getFirstName(), userPojo.getLastName(), userPojo.getEmail(), userPojo.getPassword(), role);
+
+            Optional<Attendance> attendanceOptional = attendanceRepo.getAttendanceByCheckInAndUserId(userId);
+
+            if (!attendanceOptional.isPresent()) {
+                Attendance attendance = Attendance.builder()
+                        .checkIn(LocalDateTime.now())
+                        .userId(userId)
+                        .build();
+                attendanceRepo.save(attendance);
+                AttendancePojo pojo = new AttendancePojo();
+                pojo.setAttendanceId(attendance.getAttendanceId());
+                pojo.setUserId(attendance.getUserId());
+                pojo.setCheckIn(attendance.getCheckIn());
+                pojo.setCourseId(attendance.getCourseId());
+                return pojo;
+            } else {
+                Attendance attendanceCheckOut = attendanceOptional.get();
+                attendanceCheckOut.setUserId(userId);
+                attendanceCheckOut.setCheckOut(LocalDateTime.now());
+                attendanceRepo.save(attendanceCheckOut);
+
+                AttendancePojo pojo = new AttendancePojo();
+                pojo.setAttendanceId(attendanceCheckOut.getAttendanceId());
+                pojo.setUserId(attendanceCheckOut.getUserId());
+                pojo.setCheckOut(attendanceCheckOut.getCheckOut());
+                pojo.setCourseId(attendanceCheckOut.getCourseId());
+                return pojo;
+            }
+        } catch (WebClientResponseException exception) {
+            throw new NotFoundException("user id not found");
+        }
+    }*/
 
     @Override
     public AttendancePojo checkInOutAttendance( Long userId, HttpServletRequest request) {
@@ -66,26 +121,40 @@ public class AttendanceServiceImpl implements AttendanceService {
             if (!attendanceOptional.isPresent()) {
                 Attendance attendance = Attendance.builder()
                         .checkIn(LocalDateTime.now())
-                        .user(user)
+                        .userId(userId)
                         .build();
                 attendanceRepo.save(attendance);
                 AttendancePojo pojo = new AttendancePojo();
                 pojo.setAttendanceId(attendance.getAttendanceId());
-                pojo.setUserId(attendance.getUser().getUserId());
+                pojo.setUserId(attendance.getUserId());
                 pojo.setCheckIn(attendance.getCheckIn());
-                pojo.setSubjectCode(attendance.getSubjectCode());
+
+                SmsResponse courseRes = webClientBuilder.build()
+                        .get()
+                        .uri("http://academic-service/api/courses/fetch/"+attendance.getCourseId())
+                        .retrieve()
+                        .bodyToMono(SmsResponse.class)
+                        .block();
+
+                ObjectMapper courseMapper = new ObjectMapper();
+               UserPojo userPojo1  = courseMapper.convertValue(courseRes.getPayload(), UserPojo.class);
+
+               System.out.println(userPojo1.toString()+"------------->");
+
+                pojo.setPeriod(attendance.getPeriod());
                 return pojo;
             } else {
                 Attendance attendanceCheckOut = attendanceOptional.get();
-                attendanceCheckOut.setUser(user);
+                attendanceCheckOut.setUserId(userId);
                 attendanceCheckOut.setCheckOut(LocalDateTime.now());
+                attendanceCheckOut.setPeriod(attendanceCheckOut.getPeriod());
                 attendanceRepo.save(attendanceCheckOut);
 
                 AttendancePojo pojo = new AttendancePojo();
                 pojo.setAttendanceId(attendanceCheckOut.getAttendanceId());
-                pojo.setUserId(attendanceCheckOut.getUser().getUserId());
+                pojo.setUserId(attendanceCheckOut.getUserId());
                 pojo.setCheckOut(attendanceCheckOut.getCheckOut());
-                pojo.setSubjectCode(attendanceCheckOut.getSubjectCode());
+                pojo.setCourseId(attendanceCheckOut.getCourseId());
                 return pojo;
             }
         } catch (WebClientResponseException exception) {
@@ -101,10 +170,10 @@ public class AttendanceServiceImpl implements AttendanceService {
                 .map(attendance -> {
                     AttendancePojo pojo = new AttendancePojo();
                     pojo.setAttendanceId(attendance.getAttendanceId());
-                    pojo.setUserId(attendance.getUser().getUserId());
+                    pojo.setUserId(attendance.getUserId());
                     pojo.setCheckIn(attendance.getCheckIn());
                     pojo.setCheckOut(attendance.getCheckOut());
-                    pojo.setSubjectCode(attendance.getSubjectCode());
+                    pojo.setCourseId(attendance.getCourseId());
                     return pojo;
                 }).collect(Collectors.toList());
 
@@ -123,7 +192,7 @@ public class AttendanceServiceImpl implements AttendanceService {
                 .map(attendance -> {
                     AttendancePojo pojo = new AttendancePojo();
                     pojo.setAttendanceId(attendance.getAttendanceId());
-                    pojo.setUserId(attendance.getUser().getUserId());
+                    pojo.setUserId(attendance.getUserId());
                     pojo.setCheckIn(attendance.getCheckIn());
                     pojo.setCheckOut(attendance.getCheckOut());
 
@@ -170,7 +239,7 @@ public class AttendanceServiceImpl implements AttendanceService {
                         attendances -> {
                             AttendancePojo pojo = new AttendancePojo();
                             pojo.setAttendanceId(attendances.getAttendanceId());
-                            pojo.setUserId(attendances.getUser().getUserId());
+                            pojo.setUserId(attendances.getUserId());
                             pojo.setCheckIn(attendances.getCheckIn());
                             pojo.setCheckOut(attendances.getCheckOut());
                             return pojo;
@@ -194,7 +263,7 @@ public class AttendanceServiceImpl implements AttendanceService {
                 attendances -> {
                     AttendancePojo pojo = new AttendancePojo();
                     pojo.setAttendanceId(attendances.getAttendanceId());
-                    pojo.setUserId(attendances.getUser().getUserId());
+                    pojo.setUserId(attendances.getUserId());
                     pojo.setCheckIn(attendances.getCheckIn());
                     pojo.setCheckOut(attendances.getCheckOut());
                     return pojo;

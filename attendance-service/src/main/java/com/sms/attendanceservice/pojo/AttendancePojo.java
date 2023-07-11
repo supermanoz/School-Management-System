@@ -14,7 +14,7 @@ public class AttendancePojo implements Serializable {
     private Long userId;
     private LocalDateTime checkIn;
     private LocalDateTime checkOut;
-    private String subjectCode;
+    private String period;
 
 
 }

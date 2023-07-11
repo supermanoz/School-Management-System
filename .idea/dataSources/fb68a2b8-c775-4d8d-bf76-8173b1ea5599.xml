@@ -1069,231 +1069,240 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="292" parent="283" name="hibernate_sequence">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </table>
-    <table id="293" parent="283" name="relations">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </table>
-    <table id="294" parent="283" name="roles">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </table>
-    <table id="295" parent="283" name="screens">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </table>
-    <table id="296" parent="283" name="student_attendance">
+    <table id="292" parent="283" name="course">
       <Engine>MyISAM</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="297" parent="283" name="student_grade_history">
+    <table id="293" parent="283" name="hibernate_sequence">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="298" parent="283" name="teacher_attendance">
+    <table id="294" parent="283" name="period">
       <Engine>MyISAM</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="299" parent="283" name="user_attendance">
-      <Engine>MyISAM</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </table>
-    <table id="300" parent="283" name="users">
+    <table id="295" parent="283" name="relations">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <column id="301" parent="290" name="attendance_id">
+    <table id="296" parent="283" name="roles">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="297" parent="283" name="screens">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="298" parent="283" name="student_grade_history">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="299" parent="283" name="users">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <column id="300" parent="290" name="attendance_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="302" parent="290" name="check_in">
+    <column id="301" parent="290" name="check_in">
       <DasType>datetime|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="303" parent="290" name="check_out">
+    <column id="302" parent="290" name="check_out">
       <DasType>datetime|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="304" parent="290" name="subject_code">
+    <column id="303" parent="290" name="subject_code">
       <DasType>varchar(255)|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="305" parent="290" name="user_id">
+    <column id="304" parent="290" name="user_id">
       <DasType>bigint|0s</DasType>
       <Position>5</Position>
     </column>
-    <index id="306" parent="290" name="PRIMARY">
+    <index id="305" parent="290" name="PRIMARY">
       <ColNames>attendance_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="307" parent="290" name="FKjcaqd29v2qy723owsdah2t8vx">
+    <index id="306" parent="290" name="FKjcaqd29v2qy723owsdah2t8vx">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="308" parent="290" name="PRIMARY">
+    <key id="307" parent="290" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="309" parent="291" name="authority_id">
+    <column id="308" parent="291" name="authority_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="310" parent="291" name="authority_name">
+    <column id="309" parent="291" name="authority_name">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <index id="311" parent="291" name="PRIMARY">
+    <index id="310" parent="291" name="PRIMARY">
       <ColNames>authority_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="312" parent="291" name="UK_4gictf1bsadhdebtwbanm6d21">
+    <index id="311" parent="291" name="UK_4gictf1bsadhdebtwbanm6d21">
       <ColNames>authority_name</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="313" parent="291" name="PRIMARY">
+    <key id="312" parent="291" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="314" parent="291" name="UK_4gictf1bsadhdebtwbanm6d21">
+    <key id="313" parent="291" name="UK_4gictf1bsadhdebtwbanm6d21">
       <UnderlyingIndexName>UK_4gictf1bsadhdebtwbanm6d21</UnderlyingIndexName>
     </key>
-    <column id="315" parent="292" name="next_val">
-      <DasType>bigint|0s</DasType>
-      <Position>1</Position>
-    </column>
-    <column id="316" parent="293" name="relation_id">
+    <column id="314" parent="292" name="course_id">
+      <AutoIncrement>1</AutoIncrement>
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="317" parent="293" name="authority_id">
+    <column id="315" parent="292" name="grade">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="316" parent="292" name="subject">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="317" parent="292" name="period_id">
+      <DasType>bigint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <index id="318" parent="292" name="PRIMARY">
+      <ColNames>course_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="319" parent="292" name="FK5efmmmbbf46nls6qnyjirgg5u">
+      <ColNames>period_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="320" parent="292" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="321" parent="293" name="next_val">
+      <DasType>bigint|0s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="322" parent="294" name="period_id">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>bigint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="323" parent="294" name="begins_at">
+      <DasType>time|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="324" parent="294" name="ends_at">
+      <DasType>time|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="325" parent="294" name="period_name">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <index id="326" parent="294" name="PRIMARY">
+      <ColNames>period_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="327" parent="294" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="328" parent="295" name="relation_id">
+      <DasType>bigint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="329" parent="295" name="authority_id">
       <DasType>bigint|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="318" parent="293" name="role_id">
+    <column id="330" parent="295" name="role_id">
       <DasType>bigint|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="319" parent="293" name="screen_id">
+    <column id="331" parent="295" name="screen_id">
       <DasType>bigint|0s</DasType>
       <Position>4</Position>
     </column>
-    <foreign-key id="320" parent="293" name="FK5jr7c8v1og1fyok9xvpw07w4c">
+    <foreign-key id="332" parent="295" name="FK5jr7c8v1og1fyok9xvpw07w4c">
       <ColNames>authority_id</ColNames>
       <RefColNames>authority_id</RefColNames>
       <RefTableName>authorities</RefTableName>
     </foreign-key>
-    <foreign-key id="321" parent="293" name="FK933q7nsr7jtcwmt8dke15i8fy">
+    <foreign-key id="333" parent="295" name="FK933q7nsr7jtcwmt8dke15i8fy">
       <ColNames>role_id</ColNames>
       <RefColNames>role_id</RefColNames>
       <RefTableName>roles</RefTableName>
     </foreign-key>
-    <foreign-key id="322" parent="293" name="FKoa97aplybh2nhuv5i4qpvlvlo">
+    <foreign-key id="334" parent="295" name="FKoa97aplybh2nhuv5i4qpvlvlo">
       <ColNames>screen_id</ColNames>
       <RefColNames>screen_id</RefColNames>
       <RefTableName>screens</RefTableName>
     </foreign-key>
-    <index id="323" parent="293" name="PRIMARY">
+    <index id="335" parent="295" name="PRIMARY">
       <ColNames>relation_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="324" parent="293" name="FK5jr7c8v1og1fyok9xvpw07w4c">
+    <index id="336" parent="295" name="FK5jr7c8v1og1fyok9xvpw07w4c">
       <ColNames>authority_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="325" parent="293" name="FK933q7nsr7jtcwmt8dke15i8fy">
+    <index id="337" parent="295" name="FK933q7nsr7jtcwmt8dke15i8fy">
       <ColNames>role_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="326" parent="293" name="FKoa97aplybh2nhuv5i4qpvlvlo">
+    <index id="338" parent="295" name="FKoa97aplybh2nhuv5i4qpvlvlo">
       <ColNames>screen_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="327" parent="293" name="PRIMARY">
+    <key id="339" parent="295" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="328" parent="294" name="role_id">
+    <column id="340" parent="296" name="role_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="329" parent="294" name="role">
+    <column id="341" parent="296" name="role">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <index id="330" parent="294" name="PRIMARY">
+    <index id="342" parent="296" name="PRIMARY">
       <ColNames>role_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="331" parent="294" name="UK_g50w4r0ru3g9uf6i6fr4kpro8">
+    <index id="343" parent="296" name="UK_g50w4r0ru3g9uf6i6fr4kpro8">
       <ColNames>role</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="332" parent="294" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <key id="333" parent="294" name="UK_g50w4r0ru3g9uf6i6fr4kpro8">
-      <UnderlyingIndexName>UK_g50w4r0ru3g9uf6i6fr4kpro8</UnderlyingIndexName>
-    </key>
-    <column id="334" parent="295" name="screen_id">
-      <DasType>bigint|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="335" parent="295" name="screen_name">
-      <DasType>varchar(255)|0s</DasType>
-      <Position>2</Position>
-    </column>
-    <index id="336" parent="295" name="PRIMARY">
-      <ColNames>screen_id</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <index id="337" parent="295" name="UK_jn9tm1d3ugcqxnt01qv146l98">
-      <ColNames>screen_name</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="338" parent="295" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <key id="339" parent="295" name="UK_jn9tm1d3ugcqxnt01qv146l98">
-      <UnderlyingIndexName>UK_jn9tm1d3ugcqxnt01qv146l98</UnderlyingIndexName>
-    </key>
-    <column id="340" parent="296" name="student_attendance_id">
-      <DasType>bigint|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="341" parent="296" name="attend_date">
-      <DasType>date|0s</DasType>
-      <Position>2</Position>
-    </column>
-    <column id="342" parent="296" name="student_id">
-      <DasType>bigint|0s</DasType>
-      <Position>3</Position>
-    </column>
-    <index id="343" parent="296" name="PRIMARY">
-      <ColNames>student_attendance_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
@@ -1302,142 +1311,123 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="345" parent="297" name="id">
+    <key id="345" parent="296" name="UK_g50w4r0ru3g9uf6i6fr4kpro8">
+      <UnderlyingIndexName>UK_g50w4r0ru3g9uf6i6fr4kpro8</UnderlyingIndexName>
+    </key>
+    <column id="346" parent="297" name="screen_id">
+      <DasType>bigint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="347" parent="297" name="screen_name">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <index id="348" parent="297" name="PRIMARY">
+      <ColNames>screen_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="349" parent="297" name="UK_jn9tm1d3ugcqxnt01qv146l98">
+      <ColNames>screen_name</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="350" parent="297" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="351" parent="297" name="UK_jn9tm1d3ugcqxnt01qv146l98">
+      <UnderlyingIndexName>UK_jn9tm1d3ugcqxnt01qv146l98</UnderlyingIndexName>
+    </key>
+    <column id="352" parent="298" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="346" parent="297" name="grade">
+    <column id="353" parent="298" name="grade">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="347" parent="297" name="year">
+    <column id="354" parent="298" name="year">
       <DasType>datetime(6)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="348" parent="297" name="user_id">
+    <column id="355" parent="298" name="user_id">
       <DasType>bigint|0s</DasType>
       <Position>4</Position>
     </column>
-    <foreign-key id="349" parent="297" name="FKljc6ferue0dwwaqrumoqufwwq">
+    <foreign-key id="356" parent="298" name="FKljc6ferue0dwwaqrumoqufwwq">
       <ColNames>user_id</ColNames>
       <RefColNames>user_id</RefColNames>
       <RefTableName>users</RefTableName>
     </foreign-key>
-    <index id="350" parent="297" name="PRIMARY">
+    <index id="357" parent="298" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="351" parent="297" name="FKljc6ferue0dwwaqrumoqufwwq">
+    <index id="358" parent="298" name="FKljc6ferue0dwwaqrumoqufwwq">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="352" parent="297" name="PRIMARY">
+    <key id="359" parent="298" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="353" parent="298" name="teacher_attendance_id">
+    <column id="360" parent="299" name="user_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="354" parent="298" name="check_in">
-      <DasType>datetime|0s</DasType>
-      <Position>2</Position>
-    </column>
-    <column id="355" parent="298" name="check_out">
-      <DasType>datetime|0s</DasType>
-      <Position>3</Position>
-    </column>
-    <column id="356" parent="298" name="teacher_id">
-      <DasType>bigint|0s</DasType>
-      <Position>4</Position>
-    </column>
-    <index id="357" parent="298" name="PRIMARY">
-      <ColNames>teacher_attendance_id</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="358" parent="298" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="359" parent="299" name="attendance_attendance_id">
-      <DasType>bigint|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="360" parent="299" name="users_user_id">
-      <DasType>bigint|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <index id="361" parent="299" name="UK_8yql1uyvdkbiksm0icvs3u2f0">
-      <ColNames>users_user_id</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <index id="362" parent="299" name="FK2g2lom2s77avei43g2myigslj">
-      <ColNames>attendance_attendance_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="363" parent="299" name="UK_8yql1uyvdkbiksm0icvs3u2f0">
-      <UnderlyingIndexName>UK_8yql1uyvdkbiksm0icvs3u2f0</UnderlyingIndexName>
-    </key>
-    <column id="364" parent="300" name="user_id">
-      <DasType>bigint|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="365" parent="300" name="email">
+    <column id="361" parent="299" name="email">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="366" parent="300" name="first_name">
+    <column id="362" parent="299" name="first_name">
       <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="367" parent="300" name="last_name">
+    <column id="363" parent="299" name="last_name">
       <DasType>varchar(255)|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="368" parent="300" name="password">
+    <column id="364" parent="299" name="password">
       <DasType>varchar(255)|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="369" parent="300" name="role_id">
+    <column id="365" parent="299" name="role_id">
       <DasType>bigint|0s</DasType>
       <Position>6</Position>
     </column>
-    <foreign-key id="370" parent="300" name="FKp56c1712k691lhsyewcssf40f">
+    <foreign-key id="366" parent="299" name="FKp56c1712k691lhsyewcssf40f">
       <ColNames>role_id</ColNames>
       <RefColNames>role_id</RefColNames>
       <RefTableName>roles</RefTableName>
     </foreign-key>
-    <index id="371" parent="300" name="PRIMARY">
+    <index id="367" parent="299" name="PRIMARY">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="372" parent="300" name="UK_6dotkott2kjsp8vw4d0m25fb7">
+    <index id="368" parent="299" name="UK_6dotkott2kjsp8vw4d0m25fb7">
       <ColNames>email</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="373" parent="300" name="FKp56c1712k691lhsyewcssf40f">
+    <index id="369" parent="299" name="FKp56c1712k691lhsyewcssf40f">
       <ColNames>role_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="374" parent="300" name="PRIMARY">
+    <key id="370" parent="299" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="375" parent="300" name="UK_6dotkott2kjsp8vw4d0m25fb7">
+    <key id="371" parent="299" name="UK_6dotkott2kjsp8vw4d0m25fb7">
       <UnderlyingIndexName>UK_6dotkott2kjsp8vw4d0m25fb7</UnderlyingIndexName>
     </key>
   </database-model>

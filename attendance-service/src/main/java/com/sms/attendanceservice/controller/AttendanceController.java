@@ -28,11 +28,9 @@ public class AttendanceController {
      * @Method checkInOutAttendance
      */
     @GetMapping("/checkInOut")
-    public ResponseEntity<SmsResponse> checkInOutAttendance(@RequestParam(required = false )  Long userId, HttpServletRequest request) {
-        System.out.println("Hello- i'm controller -------------------->");
+    public ResponseEntity<SmsResponse> checkInOutAttendance(@RequestParam("userId")  Long userId, HttpServletRequest request) {
 
         AttendancePojo checkInOutAttendance = attendanceService.checkInOutAttendance(userId, request);
-        System.out.println("aayo user");
         SmsResponse response = SmsResponse.builder()
                 .status(true)
                 .message("successfully created")

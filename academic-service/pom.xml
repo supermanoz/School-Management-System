@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.sms</groupId>
-	<artifactId>course-service</artifactId>
+	<artifactId>academic-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>course-service</name>
 	<description>Course Service for School Management System</description>

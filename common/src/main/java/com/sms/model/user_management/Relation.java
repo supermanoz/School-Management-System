@@ -14,7 +14,7 @@ import javax.persistence.*;
 public class Relation {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long relationId;
 
     @ManyToOne(fetch = FetchType.LAZY)

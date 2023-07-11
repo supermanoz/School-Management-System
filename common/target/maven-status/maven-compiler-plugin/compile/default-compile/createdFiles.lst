@@ -1,5 +1,8 @@
+com\sms\pojo\AcademicPojo$AcademicPojoBuilder.class
 com\sms\response\SmsResponse.class
+com\sms\pojo\AcademicPojo.class
 com\sms\exception\NotFoundException.class
+com\sms\pojo\CoursePojo.class
 com\sms\enums\user_management\PeriodEnum.class
 com\sms\services\user_management\serviceImpl\RelationServiceImpl.class
 com\sms\repository\user_management\UserRepository.class
@@ -14,6 +17,7 @@ com\sms\services\user_management\RoleService.class
 com\sms\model\user_management\Course.class
 com\sms\repository\user_management\AuthoritiesRepository.class
 com\sms\pojo\UserPojo.class
+com\sms\pojo\PeriodPojo$PeriodPojoBuilder.class
 com\sms\model\user_management\Course$CourseBuilder.class
 com\sms\pojo\RolePojo.class
 com\sms\model\user_management\Period$PeriodBuilder.class
@@ -23,13 +27,20 @@ com\sms\repository\user_management\RelationRepository.class
 com\sms\services\user_management\serviceImpl\RoleServiceImpl.class
 com\sms\Main.class
 com\sms\model\user_management\StudentGradeHistory.class
+com\sms\pojo\CoursePojo$CoursePojoBuilder.class
 com\sms\pojo\ScreenPojo.class
 com\sms\pojo\UserDetailsPojo.class
 com\sms\model\user_management\Period.class
 com\sms\model\user_management\Role.class
+com\sms\pojo\PeriodPojo.class
 com\sms\services\user_management\AuthoritiesService.class
+<<<<<<< HEAD
 com\sms\exception\AlreadyExistException.class
+=======
+com\sms\model\user_management\Academic.class
+>>>>>>> dev
 com\sms\repository\user_management\ScreenRepository.class
+com\sms\enums\user_management\TermEnum.class
 com\sms\pojo\RelationPojo.class
 com\sms\model\user_management\Relation.class
 com\sms\services\user_management\serviceImpl\UserServiceImpl.class

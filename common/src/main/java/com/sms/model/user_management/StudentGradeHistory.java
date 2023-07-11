@@ -1,5 +1,7 @@
 package com.sms.model.user_management;
 
+import com.sms.enums.user_management.GradeEnum;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -9,9 +11,8 @@ public class StudentGradeHistory {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
-    private String grade;
+    @Enumerated(EnumType.STRING)
+    private GradeEnum grade;
     private Date year;
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+    private Integer userId;
 }

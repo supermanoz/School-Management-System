@@ -7,7 +7,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+<<<<<<< HEAD
         <module name="course-service" />
+=======
+>>>>>>> dev
         <module name="config-server" />
         <module name="auth-service" />
         <module name="discovery-server" />
@@ -17,6 +20,13 @@
         <module name="user-service" />
       </profile>
     </annotationProcessing>
+<<<<<<< HEAD
+=======
+    <bytecodeTargetLevel>
+      <module name="attendance-service" target="11" />
+      <module name="course-service" target="11" />
+    </bytecodeTargetLevel>
+>>>>>>> dev
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

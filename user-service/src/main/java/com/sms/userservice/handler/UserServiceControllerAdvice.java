@@ -13,13 +13,13 @@ import java.util.NoSuchElementException;
 public class UserServiceControllerAdvice {
     @ExceptionHandler(NoSuchElementException.class)
     public ResponseEntity<?> noSuchElementExceptionHandler(NoSuchElementException noSuchElementException){
-        return ResponseEntity.badRequest().body(new SmsResponse(HttpStatus.NO_CONTENT.name(), false,noSuchElementException.getMessage()));
+        return ResponseEntity.ok().body(new SmsResponse("No Such Element", false,noSuchElementException.getMessage()));
     }
 
-    @ExceptionHandler(NotFoundException.class)
-    public ResponseEntity<?> notFoundExceptionHandler(NotFoundException notFoundException){
-        return ResponseEntity.badRequest().body(new SmsResponse(HttpStatus.NO_CONTENT.name(), false,notFoundException.getMessage()));
-    }
+//    @ExceptionHandler(NotFoundException.class)
+//    public ResponseEntity<?> notFoundExceptionHandler(NotFoundException notFoundException){
+//        return ResponseEntity.ok().body(new SmsResponse(HttpStatus.NO_CONTENT.name(), false,notFoundException.getMessage()));
+//    }
 
 //    @ExceptionHandler(Exception.class)
 //    public ResponseEntity<?> globalExceptionHandler(Exception exception){

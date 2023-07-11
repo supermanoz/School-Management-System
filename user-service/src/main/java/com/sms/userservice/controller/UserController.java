@@ -34,9 +34,6 @@ public class UserController {
     @GetMapping("/fetch/{id}")
     public ResponseEntity<SmsResponse> getUser(@PathVariable Long id) {
         User user=userService.getById(id);
-        if(user==null){
-            throw new NotFoundException("User Not Found!");
-        }
         UserPojo userRes=userToDto(user);
         return ResponseEntity.ok().body(new SmsResponse("",true,userRes));
     }
@@ -65,7 +62,7 @@ public class UserController {
     }
 
     private UserPojo userToDto(User user){
-        UserPojo userPojo=new UserPojo(user.getUserId(),user.getFirstName(),user.getLastName(),user.getEmail(),user.getPassword(),user.getRoles().getRoleId());
+        UserPojo userPojo=new UserPojo(user.getUserId(),user.getFirstName(),user.getLastName(),user.getEmail(),user.getRoles().getRole());
         return userPojo;
     }
 }

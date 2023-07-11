@@ -1,5 +1,6 @@
 package com.sms.academicservice.controller;
 
+import com.sms.academicservice.dto.AcademicRequest;
 import com.sms.academicservice.service.AcademicService;
 import com.sms.enums.academic_management.GradeEnum;
 import com.sms.pojo.academic_management.AcademicPojo;
@@ -34,5 +35,11 @@ public class AcademicController {
     public ResponseEntity<SmsResponse> getByUserIdAndGrade(@RequestParam("userId") Long userId, @RequestParam("grade") GradeEnum grade){
         List<AcademicPojo> academics = academicService.getByUserIdAndGrade(userId,grade);
         return ResponseEntity.status(HttpStatus.OK).body(new SmsResponse("Academics by user id and grade",true,academics));
+    }
+
+    @PostMapping("/save")
+    public ResponseEntity<SmsResponse> saveAcademics(@RequestBody AcademicRequest academicRequest){
+        AcademicPojo academic = academicService.save(academicRequest);
+        return ResponseEntity.status(HttpStatus.OK).body(new SmsResponse("Academics inserted",true,academic));
     }
 }

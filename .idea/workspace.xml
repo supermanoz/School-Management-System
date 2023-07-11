@@ -5,115 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77a028fd-96dc-48b3-a15b-36b8b534c2d1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/academicservice/dto/AcademicRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/academic-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/academic-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/courseservice/CourseServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/academicservice/AcademicServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/courseservice/config/FilterConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/academicservice/config/FilterConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/courseservice/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/academicservice/config/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/courseservice/config/WebClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/academicservice/config/WebClientConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/courseservice/controller/AcademicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/academicservice/controller/AcademicController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/courseservice/controller/CourseControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/academicservice/controller/CourseControler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/courseservice/controller/PeriodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/academicservice/controller/PeriodsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/courseservice/handler/CourseControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/academicservice/handler/CourseControllerAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/courseservice/repository/AcademicRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/academicservice/repository/AcademicRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/courseservice/repository/CourseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/academicservice/repository/CourseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/courseservice/repository/PeriodRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/academicservice/repository/PeriodRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/courseservice/service/AcademicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/academicservice/service/AcademicService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/courseservice/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/academicservice/service/CourseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/courseservice/service/PeriodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/academicservice/service/PeriodService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/courseservice/service/serviceImpl/AcademicServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/academicservice/service/serviceImpl/AcademicServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/courseservice/service/serviceImpl/CourseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/academicservice/service/serviceImpl/CourseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/courseservice/service/serviceImpl/PeriodServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/academicservice/service/serviceImpl/PeriodServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/academic-service/src/test/java/com/sms/courseservice/CourseServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/academic-service/src/test/java/com/sms/courseservice/AcademicServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/sms/authservice/userdetail/SmsUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sms/authservice/userdetail/SmsUserDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/sms/authservice/userdetail/SmsUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sms/authservice/userdetail/SmsUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/enums/user_management/GradeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/enums/academic_management/GradeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/enums/user_management/PeriodEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/enums/academic_management/PeriodEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/enums/user_management/TermEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/enums/academic_management/TermEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/model/user_management/Academic.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/model/academic_management/Academic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/model/user_management/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/model/academic_management/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/model/user_management/Period.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/model/academic_management/Period.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/model/user_management/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/model/user_management/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/model/user_management/StudentGradeHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/model/academic_management/StudentGradeHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/model/user_management/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/model/user_management/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/pojo/AcademicDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/pojo/academic_management/AcademicDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/pojo/AcademicPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/pojo/academic_management/AcademicPojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/pojo/AuthoritiesPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/pojo/user_management/AuthoritiesPojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/pojo/CoursePojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/pojo/academic_management/CoursePojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/pojo/PeriodPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/pojo/academic_management/PeriodPojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/pojo/RelationPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/pojo/user_management/RelationPojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/pojo/RolePojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/pojo/user_management/RolePojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/pojo/ScreenPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/pojo/user_management/ScreenPojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/pojo/UserDetailsPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/pojo/user_management/UserDetailsPojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/pojo/UserPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/pojo/user_management/UserPojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/repository/user_management/AuthoritiesRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/repository/user_management/RelationRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/repository/user_management/RoleRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/repository/user_management/ScreenRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/repository/user_management/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/services/user_management/AuthoritiesService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/services/user_management/RelationService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/services/user_management/RoleService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/services/user_management/ScreenService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/services/user_management/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/services/user_management/serviceImpl/AuthoritiesServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/services/user_management/serviceImpl/RelationServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/services/user_management/serviceImpl/RoleServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/services/user_management/serviceImpl/ScreenServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/services/user_management/serviceImpl/UserServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/enums/user_management/GradeEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/enums/user_management/PeriodEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/enums/user_management/TermEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Academic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Course$CourseBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Course.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Period$PeriodBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Period.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/Role.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/StudentGradeHistory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/model/user_management/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/pojo/AcademicDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/pojo/AcademicPojo$AcademicPojoBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/pojo/AcademicPojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/pojo/AuthoritiesPojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/pojo/CoursePojo$CoursePojoBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/pojo/CoursePojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/pojo/PeriodPojo$PeriodPojoBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/pojo/PeriodPojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/pojo/RelationPojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/pojo/RolePojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/pojo/ScreenPojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/pojo/UserDetailsPojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/pojo/UserPojo$UserPojoBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/pojo/UserPojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/repository/user_management/AuthoritiesRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/repository/user_management/RelationRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/repository/user_management/RoleRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/repository/user_management/ScreenRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/repository/user_management/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/AuthoritiesService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/RelationService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/RoleService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/ScreenService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/serviceImpl/AuthoritiesServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/serviceImpl/RelationServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/serviceImpl/RoleServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/serviceImpl/ScreenServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/services/user_management/serviceImpl/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/common-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/common-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/common-1.0.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/common-1.0.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sms/userservice/UserServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sms/userservice/UserServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sms/userservice/config/FilterConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sms/userservice/config/FilterConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sms/userservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sms/userservice/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sms/userservice/filter/RequestSourceFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sms/userservice/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sms/userservice/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sms/userservice/service/serviceImpl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sms/userservice/service/serviceImpl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/academicservice/controller/AcademicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/academicservice/controller/AcademicController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/academicservice/service/AcademicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/academicservice/service/AcademicService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/academicservice/service/serviceImpl/AcademicServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/academicservice/service/serviceImpl/AcademicServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/model/academic_management/Academic.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/model/academic_management/Academic.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,10 +151,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.AcademicServiceApplication" />
-        <item itemvalue="Application.UserServiceApplication" />
-        <item itemvalue="Application.CourseServiceApplication" />
         <item itemvalue="Application.GatewayServerApplication" />
+        <item itemvalue="Application.UserServiceApplication" />
         <item itemvalue="Application.AuthServiceApplication" />
+        <item itemvalue="Application.CourseServiceApplication" />
       </list>
     </recent_temporary>
   </component>

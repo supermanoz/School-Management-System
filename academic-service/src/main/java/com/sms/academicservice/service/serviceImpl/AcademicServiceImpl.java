@@ -1,12 +1,15 @@
 package com.sms.academicservice.service.serviceImpl;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sms.academicservice.dto.AcademicRequest;
 import com.sms.academicservice.service.AcademicService;
 import com.sms.academicservice.repository.AcademicRepository;
 import com.sms.enums.academic_management.GradeEnum;
 import com.sms.enums.academic_management.TermEnum;
 import com.sms.enums.user_management.UserEnum;
 import com.sms.exception.NotFoundException;
+import com.sms.model.academic_management.Academic;
+import com.sms.model.academic_management.Course;
 import com.sms.pojo.academic_management.AcademicDto;
 import com.sms.pojo.academic_management.AcademicPojo;
 import com.sms.pojo.user_management.UserPojo;
@@ -139,6 +142,46 @@ public class AcademicServiceImpl implements AcademicService {
             );
         });
         return academicRes;
+    }
+
+    @Override
+    public AcademicPojo save(AcademicRequest academicRequest) {
+        SmsResponse res=webClientBuilder.build().get()
+                .uri("http://USER-SERVICE/api/users/fetch/"+academicRequest.getUserId())
+                .headers(headers -> {
+                    headers.set("SMS_API_KEY","thisisasecret");
+                    headers.set("Authorization",request.getHeader("Authorization"));
+                })
+                .retrieve()
+                .bodyToMono(SmsResponse.class)
+                .block();
+        if(!res.getStatus()){
+            throw new NotFoundException("User with the given ID not found!");
+        }
+        ObjectMapper mapper=new ObjectMapper();
+        UserPojo userRes=mapper.convertValue(res.getPayload(),UserPojo.class);
+
+        if(!userRes.getRole().equals(UserEnum.STUDENT)){
+            throw new RuntimeException("User is not a student!");
+        }
+        Academic academic=Academic.builder()
+                .academicId(academicRequest.getAcademicId())
+                .course(Course.builder().courseId(academicRequest.getCourseId()).build())
+                .userId(academicRequest.getUserId())
+                .term(academicRequest.getTerm())
+                .marks(academicRequest.getMarks())
+                .date(new Date())
+                .build();
+        Academic savedAcademic=academicRepository.save(academic);
+
+        return AcademicPojo.builder()
+                .academicId(savedAcademic.getAcademicId())
+                .user(userRes)
+                .term(savedAcademic.getTerm())
+                .subject(savedAcademic.getCourse().getSubject())
+                .marks(savedAcademic.getMarks())
+                .date(savedAcademic.getDate())
+                .build();
     }
 
     private UserPojo getByUserId(Long userId,List<Map<String,Object>> users){

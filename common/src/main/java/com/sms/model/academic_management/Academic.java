@@ -3,6 +3,7 @@ package com.sms.model.academic_management;
 import com.sms.enums.academic_management.TermEnum;
 import com.sms.pojo.academic_management.AcademicDto;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -15,6 +16,7 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @NamedNativeQuery(name="getAllByUserIdAndGrade",
         query="select academic_id as academicId,date,marks,term,course.subject,academic.user_id as userId,student_grade_history.grade from academic join course on academic.course_id=course.course_id join student_grade_history on academic.user_id=student_grade_history.user_id where student_grade_history.grade=:grade and academic.user_id=:userId",
         resultSetMapping = "Mapping.AcademicDto"

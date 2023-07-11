@@ -9,8 +9,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableEurekaClient
-@ComponentScan(basePackages = {"com.sms.model.*","com.sms.userservice.*"})
-@EntityScan(basePackages = {"com.sms.model"})
+@ComponentScan(basePackages = {"com.sms.filter","com.sms.userservice.*"})
+@EntityScan(basePackages = {"com.sms.model.user_management"})
 public class UserServiceApplication {
 
 	public static void main(String[] args) {

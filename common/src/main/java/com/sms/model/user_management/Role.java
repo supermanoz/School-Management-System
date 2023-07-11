@@ -1,6 +1,5 @@
 package com.sms.model.user_management;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sms.enums.user_management.UserEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;

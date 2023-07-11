@@ -1,8 +1,7 @@
 package com.sms.authservice.userdetail;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sms.pojo.UserDetailsPojo;
-import com.sms.pojo.UserPojo;
+import com.sms.pojo.user_management.UserDetailsPojo;
 import com.sms.response.SmsResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

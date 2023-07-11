@@ -1,7 +1,7 @@
 package com.sms.userservice.controller;
 
 import com.sms.exception.NotFoundException;
-import com.sms.pojo.UserPojo;
+import com.sms.pojo.user_management.UserPojo;
 import com.sms.response.SmsResponse;
 import com.sms.userservice.service.UserService;
 import com.sms.model.user_management.User;

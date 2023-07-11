@@ -1,7 +1,6 @@
 package com.sms.authservice.userdetail;
 
-import com.sms.model.user_management.User;
-import com.sms.pojo.UserDetailsPojo;
+import com.sms.pojo.user_management.UserDetailsPojo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.core.GrantedAuthority;

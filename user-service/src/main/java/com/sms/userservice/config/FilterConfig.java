@@ -1,6 +1,6 @@
 package com.sms.userservice.config;
 
-import com.sms.userservice.filter.RequestSourceFilter;
+import com.sms.filter.RequestSourceFilter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;

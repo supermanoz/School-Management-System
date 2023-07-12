@@ -54,6 +54,14 @@ public class UserController {
         return ResponseEntity.ok().body(new SmsResponse("",true,userRes));
     }
 
+    @GetMapping("/fetchStudent/{id}")
+    public ResponseEntity<SmsResponse> getStudent(Long id) {
+        List<User> users=userService.getAllStudents();
+        List<UserPojo> userRes=new ArrayList<>();
+        users.forEach(user->userRes.add(userToDto(user)));
+        return ResponseEntity.ok().body(new SmsResponse("",true,userRes));
+    }
+
     @PostMapping("/save")
     public ResponseEntity<SmsResponse> save(@RequestBody User user){
         user.setPassword(BCrypt.hashpw(user.getPassword(),BCrypt.gensalt()));

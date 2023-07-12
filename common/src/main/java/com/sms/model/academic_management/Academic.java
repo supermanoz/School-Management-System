@@ -17,8 +17,8 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@NamedNativeQuery(name="getAllByUserIdAndGrade",
-        query="select academic_id as academicId,date,marks,term,course.subject,academic.user_id as userId,student_grade_history.grade from academic join course on academic.course_id=course.course_id join student_grade_history on academic.user_id=student_grade_history.user_id where student_grade_history.grade=:grade and academic.user_id=:userId",
+@NamedNativeQuery(name="getAllByUserIdAndTermAndGrade",
+        query="select academic_id as academicId,date,marks,term,course.subject,academic.user_id as userId,student_grade_history.grade from academic join course on academic.course_id=course.course_id join student_grade_history on academic.user_id=student_grade_history.user_id where academic.term=:term and student_grade_history.grade=:grade and academic.user_id=:userId",
         resultSetMapping = "Mapping.AcademicDto"
 )
 @SqlResultSetMapping(name="Mapping.AcademicDto",

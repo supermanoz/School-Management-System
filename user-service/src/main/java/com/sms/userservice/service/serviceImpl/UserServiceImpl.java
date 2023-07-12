@@ -1,5 +1,8 @@
 package com.sms.userservice.service.serviceImpl;
 
+import com.sms.enums.user_management.UserEnum;
+import com.sms.exception.NotFoundException;
+import com.sms.pojo.user_management.StudentPojo;
 import com.sms.userservice.repository.UserRepository;
 import com.sms.userservice.service.UserService;
 import com.sms.model.user_management.User;
@@ -37,5 +40,18 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<User> getAllStudents() {
         return userRepository.findAllStudents();
+    }
+
+    @Override
+    public StudentPojo getStudent(Long id) {
+        Optional<User> user=userRepository.findById(id);
+        if(!user.isPresent() || !user.get().getRoles().equals(UserEnum.STUDENT)){
+            throw new NotFoundException("Student not found!");
+        }
+       return StudentPojo.builder()
+                .userId(user.get().getUserId())
+                .firstName(user.get().getFirstName())
+                .lastName(user.get().getLastName())
+                .build();
     }
 }

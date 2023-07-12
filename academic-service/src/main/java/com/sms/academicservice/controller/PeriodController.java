@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/periods")
-public class PeriodsController {
+public class PeriodController {
     @Autowired
     private PeriodService periodService;
     @PostMapping("/save")

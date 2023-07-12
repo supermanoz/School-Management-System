@@ -16,6 +16,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="course-service" target="11" />
       <module name="School Management System" target="11" />
     </bytecodeTargetLevel>
   </component>
@@ -26,6 +27,7 @@
       <module name="auth-service" options="-parameters" />
       <module name="common" options="-parameters" />
       <module name="config-server" options="-parameters" />
+      <module name="course-service" options="-parameters" />
       <module name="gateway-server" options="-parameters" />
       <module name="user-service" options="-parameters" />
     </option>

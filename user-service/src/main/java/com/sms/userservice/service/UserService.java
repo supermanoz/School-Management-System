@@ -1,6 +1,7 @@
 package com.sms.userservice.service;
 
 import com.sms.model.user_management.User;
+import com.sms.pojo.user_management.StudentPojo;
 
 import java.util.List;
 import java.util.Map;
@@ -13,4 +14,5 @@ public interface UserService {
     public User save(User user);
     public User getById(Long id);
     public List<User> getAllStudents();
+    public StudentPojo getStudent(Long id);
 }

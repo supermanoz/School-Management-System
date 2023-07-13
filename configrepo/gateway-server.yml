@@ -12,3 +12,7 @@ spring:
           uri: lb://ACADEMIC-SERVICE
           predicates:
             - Path=/api/courses/**,/api/periods/**,/api/academics/**
+        - id: attendance-service
+          uri: lb://ATTENDANCE-SERVICE
+          predicates:
+            - Path=/api/attendance/**

@@ -2,6 +2,7 @@ package com.sms.academicservice.service.serviceImpl;
 
 import com.sms.academicservice.repository.PeriodRepository;
 import com.sms.academicservice.service.PeriodService;
+import com.sms.enums.academic_management.PeriodEnum;
 import com.sms.model.academic_management.Period;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,8 +30,13 @@ public class PeriodServiceImpl implements PeriodService {
     }
 
     @Override
-    public String getByCurrentTime() {
-        Map<String,Object> period=periodRepository.findOneByCurrentTime();
-        return (String)period.get("period");
+    public Period getByCurrentTime() {
+        Period period=periodRepository.findOneByCurrentTime();
+        if(period==null){
+            return Period.builder()
+                    .periodName(PeriodEnum.OFF)
+                    .build();
+        }
+        return period;
     }
 }

@@ -34,6 +34,6 @@ public class AuthController {
 
     @GetMapping("/authenticate")
     public ResponseEntity<SmsResponse> authenticate(){
-        return ResponseEntity.ok().body(new SmsResponse("Authenticated",true,null));
+        return ResponseEntity.ok().body(new SmsResponse("Authenticated",true,authService.getPrincipal()));
     }
 }

@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="77a028fd-96dc-48b3-a15b-36b8b534c2d1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/com/sms/gatewayserver/filter/AuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/java/com/sms/gatewayserver/filter/AuthFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/sms/authservice/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sms/authservice/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/sms/authservice/handler/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sms/authservice/handler/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/sms/authservice/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sms/authservice/service/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/sms/authservice/service/serviceImpl/AuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sms/authservice/service/serviceImpl/AuthServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,27 +48,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/GitHub/School-Management-System/academic-service&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "11",
+    "last_opened_file_path": "F:/GitHub/School-Management-System/academic-service/src/main/java/com/sms/academicservice/security",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\GitHub\School-Management-System\academic-service\src\main\java\com\sms\academicservice\security" />
+      <recent name="F:\GitHub\School-Management-System\academic-service\src\main\java\com\sms\academicservice" />
+      <recent name="F:\GitHub\School-Management-System\user-service\src\main\java\com\sms\userservice" />
+      <recent name="F:\GitHub\School-Management-System\user-service\src\main\java\com\sms\userservice\config" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sms.academicservice.security" />
+      <recent name="com.sms.userservice.util" />
       <recent name="com.sms.pojo" />
       <recent name="com.sms.userservice.config" />
       <recent name="com.sms.courseservice.config" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GatewayServerApplication">
+  <component name="RunManager" selected="Application.AuthServiceApplication">
     <configuration name="AcademicServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sms.academicservice.AcademicServiceApplication" />
       <module name="academic-service" />
@@ -145,10 +157,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GatewayServerApplication" />
         <item itemvalue="Application.AuthServiceApplication" />
-        <item itemvalue="Application.AcademicServiceApplication" />
         <item itemvalue="Application.UserServiceApplication" />
+        <item itemvalue="Application.GatewayServerApplication" />
+        <item itemvalue="Application.AcademicServiceApplication" />
         <item itemvalue="Application.CourseServiceApplication" />
       </list>
     </recent_temporary>

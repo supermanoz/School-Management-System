@@ -20,10 +20,10 @@ public interface AttendanceService {
 
     AttendancePojo getByAttendanceId(Long attendanceId);
 
-
-
     List<AttendancePojo> getAllAttendanceBetweenDates(DateTimePojo dateTimePojo);
 
     List<AttendancePojo> getAllAttendanceBetweenDatesByUserId(Long userId,DateTimePojo dateTimePojo);
+
+    List<AttendancePojo> getAllAttendanceByPeriod(String period);
 
 }

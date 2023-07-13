@@ -4,22 +4,4 @@ spring:
   config:
 #    import: optional:configserver:CONFIG-SERVER
     import: configserver:http://localhost:8888
-<<<<<<< HEAD
-  cloud:
-    gateway:
-      routes:
-        - id: attendance-service
-          uri: lb://ATTENDANCE-SERVICE
-          predicates:
-            - Path=/api/attendances/**
 
-#        - id: config-server
-#          uri: lb://config-server
-#          predicates:
-#            - Path=/**
-        - id: user-service
-          uri: lb://USER-SERVICE
-          predicates:
-            - Path=/api/users/**
-=======
->>>>>>> f6abc26a149fc7b600078848304bea04278a3970

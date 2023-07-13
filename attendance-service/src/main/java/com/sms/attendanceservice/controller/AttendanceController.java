@@ -113,4 +113,18 @@ public class AttendanceController {
 
         return ResponseEntity.ok().body(response);
     }
+
+    @GetMapping("/fetchByPeriod")
+    public ResponseEntity<?> getAllAttendanceByPeriod(@RequestParam String period){
+
+        List<AttendancePojo> attendancePojo = attendanceService.getAllAttendanceByPeriod(period);
+        SmsResponse response = SmsResponse.builder()
+                .message("successfully found")
+                .status(true)
+                .payload(attendancePojo)
+                .build();
+
+       return ResponseEntity.ok().body(response);
+
+    }
 }

@@ -24,6 +24,7 @@ com\sms\pojo\academic_management\AcademicPojo.class
 com\sms\model\academic_management\Period$PeriodBuilder.class
 com\sms\model\user_management\Role.class
 com\sms\pojo\academic_management\PeriodPojo.class
+com\sms\exception\AlreadyExistException.class
 com\sms\pojo\user_management\UserPojo.class
 com\sms\model\academic_management\StudentGradeHistory.class
 com\sms\pojo\user_management\ScreenPojo.class

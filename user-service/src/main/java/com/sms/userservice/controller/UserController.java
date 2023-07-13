@@ -34,6 +34,10 @@ public class UserController {
     @GetMapping("/fetch/{id}")
     public ResponseEntity<SmsResponse> getUser(@PathVariable Long id) {
         User user=userService.getById(id);
+        if (user==null)
+        {
+            throw new NotFoundException("This userId is not Persent");
+        }
         UserPojo userRes=userToDto(user);
         return ResponseEntity.ok().body(new SmsResponse("",true,userRes));
     }

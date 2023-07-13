@@ -13,13 +13,11 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.reactive.function.client.WebClient;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.sms.*"})
-@EntityScan(basePackages = {"com.sms.*","com.sms.attendanceservice.*"})
-@EnableJpaRepositories(basePackages = {"com.sms.attendanceservice.*","com.sms.*"})
+//@ComponentScan(basePackages = {"com.sms.*"})
+@EntityScan(basePackages = {"com.sms.attendanceservice"})
+//@EnableJpaRepositories(basePackages = {"com.sms.attendanceservice.*","com.sms.*"})
 @Configuration
 @EnableEurekaClient
-
-
 public class AttendanceServiceApplication {
 
 	@Bean
@@ -27,7 +25,6 @@ public class AttendanceServiceApplication {
 	public WebClient.Builder webClientBuilder(){
 		return WebClient.builder();
 	}
-
 
 	public static void main(String[] args) {
 		SpringApplication.run(AttendanceServiceApplication.class, args);

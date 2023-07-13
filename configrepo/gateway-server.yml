@@ -15,4 +15,4 @@ spring:
         - id: attendance-service
           uri: lb://ATTENDANCE-SERVICE
           predicates:
-            - Path=/api/attendance/**
+            - Path=/api/attendances/**

@@ -1,8 +1,11 @@
 com\sms\response\SmsResponse.class
+com\sms\exception\AlreadyExistsException.class
+com\sms\model\academic_management\Academic$AcademicBuilder.class
 com\sms\exception\NotFoundException.class
 com\sms\enums\academic_management\TermEnum.class
 com\sms\enums\academic_management\GradeEnum.class
 com\sms\model\academic_management\Course.class
+com\sms\filter\AuthenticationFilter.class
 com\sms\pojo\user_management\UserPojo$UserPojoBuilder.class
 com\sms\model\academic_management\Academic.class
 com\sms\model\user_management\Authorities.class
@@ -25,6 +28,7 @@ com\sms\model\academic_management\Period$PeriodBuilder.class
 com\sms\model\user_management\Role.class
 com\sms\pojo\academic_management\PeriodPojo.class
 com\sms\pojo\user_management\UserPojo.class
+com\sms\pojo\user_management\StudentPojo$StudentPojoBuilder.class
 com\sms\model\academic_management\StudentGradeHistory.class
 com\sms\pojo\user_management\ScreenPojo.class
 com\sms\pojo\academic_management\AcademicPojo$AcademicPojoBuilder.class
@@ -32,3 +36,4 @@ com\sms\model\user_management\Relation.class
 com\sms\model\user_management\Screen.class
 com\sms\model\academic_management\Period.class
 com\sms\response\SmsResponse$SmsResponseBuilder.class
+com\sms\pojo\user_management\StudentPojo.class

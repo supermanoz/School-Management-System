@@ -2,6 +2,7 @@ F:\GitHub\School-Management-System\common\src\main\java\com\sms\model\academic_m
 F:\GitHub\School-Management-System\common\src\main\java\com\sms\pojo\user_management\RelationPojo.java
 F:\GitHub\School-Management-System\common\src\main\java\com\sms\Main.java
 F:\GitHub\School-Management-System\common\src\main\java\com\sms\exception\NotFoundException.java
+F:\GitHub\School-Management-System\common\src\main\java\com\sms\filter\AuthenticationFilter.java
 F:\GitHub\School-Management-System\common\src\main\java\com\sms\enums\academic_management\PeriodEnum.java
 F:\GitHub\School-Management-System\common\src\main\java\com\sms\pojo\academic_management\AcademicPojo.java
 F:\GitHub\School-Management-System\common\src\main\java\com\sms\model\user_management\Screen.java
@@ -21,7 +22,9 @@ F:\GitHub\School-Management-System\common\src\main\java\com\sms\enums\user_manag
 F:\GitHub\School-Management-System\common\src\main\java\com\sms\filter\RequestSourceFilter.java
 F:\GitHub\School-Management-System\common\src\main\java\com\sms\enums\academic_management\GradeEnum.java
 F:\GitHub\School-Management-System\common\src\main\java\com\sms\model\user_management\User.java
+F:\GitHub\School-Management-System\common\src\main\java\com\sms\exception\AlreadyExistsException.java
 F:\GitHub\School-Management-System\common\src\main\java\com\sms\pojo\academic_management\CoursePojo.java
+F:\GitHub\School-Management-System\common\src\main\java\com\sms\pojo\user_management\StudentPojo.java
 F:\GitHub\School-Management-System\common\src\main\java\com\sms\model\user_management\Role.java
 F:\GitHub\School-Management-System\common\src\main\java\com\sms\pojo\user_management\AuthoritiesPojo.java
 F:\GitHub\School-Management-System\common\src\main\java\com\sms\pojo\user_management\UserPojo.java

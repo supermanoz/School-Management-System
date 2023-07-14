@@ -21,6 +21,8 @@ public class SecurityConfig {
     @Value("${sms.auth.token.value}")
     private String AUTH_TOKEN;
 
+    @Autowired
+    private AuthEntryPoint authEntryPoint;
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
@@ -29,6 +31,8 @@ public class SecurityConfig {
                 .antMatchers("/api/auth/getToken").permitAll()
                 .anyRequest().authenticated()
                 .and().httpBasic()
+                .and().exceptionHandling()
+                .authenticationEntryPoint(authEntryPoint)
                 .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and().addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
                 .addFilterBefore(new RequestSourceFilter(AUTH_TOKEN_HEADER_NAME,AUTH_TOKEN), UsernamePasswordAuthenticationFilter.class)

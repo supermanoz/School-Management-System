@@ -17,7 +17,15 @@ public class FilterConfig {
     public FilterRegistrationBean<RequestSourceFilter> requestSourceFilterFilterRegistrationBean(){
         FilterRegistrationBean<RequestSourceFilter> registrationBean = new FilterRegistrationBean<>();
         registrationBean.setFilter(new RequestSourceFilter(AUTH_TOKEN_HEADER_NAME,AUTH_TOKEN));
-        registrationBean.addUrlPatterns("/api/courses/*","/api/periods/*");
+        registrationBean.addUrlPatterns("/api/courses/*","/api/periods/*","/api/academics/*");
+        return registrationBean;
+    }
+
+    @Bean
+    public FilterRegistrationBean<AuthenticationFilter> authFilterFilterRegistrationBean(){
+        FilterRegistrationBean<AuthenticationFilter> registrationBean = new FilterRegistrationBean<>();
+        registrationBean.setFilter(new AuthenticationFilter(AUTH_TOKEN_HEADER_NAME,AUTH_TOKEN));
+        registrationBean.addUrlPatterns("/api/courses/*","/api/periods/*","/api/academics/*");
         return registrationBean;
     }
 }

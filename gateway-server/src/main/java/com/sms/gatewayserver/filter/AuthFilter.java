@@ -54,15 +54,20 @@ public class AuthFilter {
 //            }
 //            return chain.filter(exchange);
 //        };
-        return (exchange, chain) ->{
-            return webClientBuilder.build().get()
-                    .uri("http://AUTH-SERVICE/api/auth/authenticate")
-                    .headers(header -> {
-                        header.set(AUTH_TOKEN_HEADER_NAME,AUTH_TOKEN_HEADER_VALUE);
-                        header.set("Authorization", exchange.getRequest().getHeaders().getFirst("Authorization"));
-                    })
-                    .exchange()
-                    .flatMap(response->response.statusCode().value()==200?setAuthorizedResponse(exchange,chain):setUnauthorizedResponse(exchange));
+
+//        return (exchange, chain) ->{
+//            return webClientBuilder.build().get()
+//                    .uri("http://AUTH-SERVICE/api/auth/authenticate")
+//                    .headers(header -> {
+//                        header.set(AUTH_TOKEN_HEADER_NAME,AUTH_TOKEN_HEADER_VALUE);
+//                        header.set("Authorization", exchange.getRequest().getHeaders().getFirst("Authorization"));
+//                    })
+//                    .exchange()
+//                    .flatMap(response->response.statusCode().value()==200?setAuthorizedResponse(exchange,chain):setUnauthorizedResponse(exchange));
+//        };
+
+        return (exchange, chain) -> {
+            return setAuthorizedResponse(exchange,chain);
         };
     }
 

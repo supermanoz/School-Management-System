@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -53,19 +54,31 @@ public class AuthFilter {
 //            }
 //            return chain.filter(exchange);
 //        };
-        return (exchange, chain) ->{
-            return webClientBuilder.build().get()
-                    .uri("http://AUTH-SERVICE/api/auth/authenticate")
-                    .headers(header -> {
-                        header.set(AUTH_TOKEN_HEADER_NAME,AUTH_TOKEN_HEADER_VALUE);
-                        header.set("Authorization", exchange.getRequest().getHeaders().getFirst("Authorization"));
-                    })
-                    .exchange()
-                    .flatMap(response->response.statusCode().value()==200?chain.filter(exchange):setModifiedResponse(exchange));
+
+//        return (exchange, chain) ->{
+//            return webClientBuilder.build().get()
+//                    .uri("http://AUTH-SERVICE/api/auth/authenticate")
+//                    .headers(header -> {
+//                        header.set(AUTH_TOKEN_HEADER_NAME,AUTH_TOKEN_HEADER_VALUE);
+//                        header.set("Authorization", exchange.getRequest().getHeaders().getFirst("Authorization"));
+//                    })
+//                    .exchange()
+//                    .flatMap(response->response.statusCode().value()==200?setAuthorizedResponse(exchange,chain):setUnauthorizedResponse(exchange));
+//        };
+
+        return (exchange, chain) -> {
+            return setAuthorizedResponse(exchange,chain);
         };
     }
 
-    private Mono<Void> setModifiedResponse(ServerWebExchange exchange){
+    private Mono<Void> setAuthorizedResponse(ServerWebExchange exchange,GatewayFilterChain chain){
+        HttpHeaders headers=HttpHeaders.writableHttpHeaders(exchange.getRequest().getHeaders());
+        headers.set(AUTH_TOKEN_HEADER_NAME,AUTH_TOKEN_HEADER_VALUE);
+        LOGGER.trace("Setting api auth header to authorized request");
+        return chain.filter(exchange);
+    }
+
+    private Mono<Void> setUnauthorizedResponse(ServerWebExchange exchange){
         exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
         LOGGER.trace("Setting response as unauthorized");
         return exchange.getResponse().setComplete();

@@ -1,5 +1,6 @@
 package com.sms.academicservice.config;
 
+import com.sms.academicservice.filter.TestAuthFilter;
 import com.sms.filter.AuthenticationFilter;
 import com.sms.filter.RequestSourceFilter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,10 +28,18 @@ public class FilterConfig {
         return registrationBean;
     }
 
+//    @Bean
+//    public FilterRegistrationBean<AuthenticationFilter> authFilterFilterRegistrationBean(){
+//        FilterRegistrationBean<AuthenticationFilter> registrationBean = new FilterRegistrationBean<>();
+//        registrationBean.setFilter(new AuthenticationFilter(AUTH_TOKEN_HEADER_NAME,AUTH_TOKEN,webClientBuilder));
+//        registrationBean.addUrlPatterns("/api/courses/*","/api/periods/*","/api/academics/*");
+//        return registrationBean;
+//    }
+
     @Bean
-    public FilterRegistrationBean<AuthenticationFilter> authFilterFilterRegistrationBean(){
-        FilterRegistrationBean<AuthenticationFilter> registrationBean = new FilterRegistrationBean<>();
-        registrationBean.setFilter(new AuthenticationFilter(AUTH_TOKEN_HEADER_NAME,AUTH_TOKEN,webClientBuilder));
+    public FilterRegistrationBean<TestAuthFilter> authFilterFilterRegistrationBean(){
+        FilterRegistrationBean<TestAuthFilter> registrationBean = new FilterRegistrationBean<>();
+        registrationBean.setFilter(new TestAuthFilter(AUTH_TOKEN_HEADER_NAME,AUTH_TOKEN,webClientBuilder));
         registrationBean.addUrlPatterns("/api/courses/*","/api/periods/*","/api/academics/*");
         return registrationBean;
     }

@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77a028fd-96dc-48b3-a15b-36b8b534c2d1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/filter/AuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/academicservice/config/ApplicationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/academicservice/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/academicservice/filter/TestAuthFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/academicservice/config/AuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/academic-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/academic-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/academicservice/config/FilterConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/academic-service/src/main/java/com/sms/academicservice/config/FilterConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/sms/authservice/handler/SecurityExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sms/authservice/handler/SecurityExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/filter/AuthorizationFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/common-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/common-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/common-1.0.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/common-1.0.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/sms/filter/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/sms/filter/AuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/sms/filter/AuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/sms/filter/AuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sms/userservice/config/FilterConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sms/userservice/config/FilterConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sms/userservice/config/WebClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sms/userservice/config/WebClientConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,14 +73,14 @@
       <recent name="F:\GitHub\School-Management-System\user-service\src\main\java\com\sms\userservice\config" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sms.academicservice.config" />
+      <recent name="com.sms.academicservice.filter" />
       <recent name="com.sms.academicservice.handler" />
       <recent name="com.sms.academicservice.security" />
       <recent name="com.sms.userservice.util" />
-      <recent name="com.sms.pojo" />
-      <recent name="com.sms.userservice.config" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GatewayServerApplication">
+  <component name="RunManager" selected="Application.AcademicServiceApplication">
     <configuration name="AcademicServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sms.academicservice.AcademicServiceApplication" />
       <module name="academic-service" />
@@ -160,10 +161,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GatewayServerApplication" />
-        <item itemvalue="Application.UserServiceApplication" />
         <item itemvalue="Application.AcademicServiceApplication" />
+        <item itemvalue="Application.UserServiceApplication" />
         <item itemvalue="Application.AuthServiceApplication" />
+        <item itemvalue="Application.GatewayServerApplication" />
         <item itemvalue="Application.CourseServiceApplication" />
       </list>
     </recent_temporary>

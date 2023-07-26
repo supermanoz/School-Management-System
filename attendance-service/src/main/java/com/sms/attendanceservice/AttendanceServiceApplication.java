@@ -20,6 +20,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 @EnableEurekaClient
 public class AttendanceServiceApplication {
 
+	
 	@Bean
 	@LoadBalanced
 	public WebClient.Builder webClientBuilder(){
